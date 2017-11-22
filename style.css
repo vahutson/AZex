@@ -6,9 +6,9 @@
 body {
   width: 100%;
   height: 100vh;
-  background: url("img/bricks.jpg") center repeat-y;
+  background: url("img/bricks.jpg") center no-repeat;
   background-size: cover;
-  font-family: 'Fira Mono', monospace;
+  font-family: sans-serif;
 }
 a {
   text-decoration: none;
@@ -21,6 +21,7 @@ header {
   width: 100%;
   height: 50px;
   padding: 0 50px;
+  font-family: 'Fira Mono', monospace;
   background: #ffffff;
   -webkit-box-shadow: 0px 0px 14px 0px rgba(95, 95, 95, 0.53);
   -moz-box-shadow: 0px 0px 14px 0px rgba(95, 95, 95, 0.53);
@@ -64,16 +65,22 @@ header nav .contacts {
 .wrapper {
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.69);
+  background-color: rgba(255, 255, 255, 0.85);
 }
 .wrapper .container {
   width: 100%;
   padding: 50px;
 }
-.wrapper .container .bigLogo {
+.wrapper .container .main_header .bigLogo {
   display: block;
   margin: 50px auto 0 auto;
 }
-.wrapper .container h1 {
+.wrapper .container .main_header h1 {
   text-align: center;
+  font-weight: lighter;
+}
+.wrapper .container .main_header .paragraph {
+  text-align: center;
+  margin-top: 25px;
+  line-height: 1.5;
 }
