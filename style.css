@@ -88,10 +88,61 @@ header nav .contacts {
   margin-top: 25px;
   line-height: 1.5;
 }
+.wrapper .container.contact_us .contactMain {
+  display: flex;
+  height: 500px;
+}
+.wrapper .container.contact_us .contactMain .contactLets {
+  width: 50%;
+  background: #f8a408;
+}
+.wrapper .container.contact_us .contactMain .contactLets h5.paragraph {
+  padding: 15px;
+  color: white;
+  font-size: 30px;
+  font-weight: 900;
+}
+.wrapper .container.contact_us .contactMain .contactLets p.paragraph {
+  padding: 15px;
+  color: black;
+  font-weight: inherit;
+}
+.wrapper .container.contact_us .contactMain .formWrap {
+  width: 50%;
+}
+.wrapper .container.contact_us .contactMain .formWrap #contactForm {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 15px 15px 0 15px;
+}
+.wrapper .container.contact_us .contactMain .formWrap #contactForm input,
+.wrapper .container.contact_us .contactMain .formWrap #contactForm button {
+  height: 30px;
+}
+.wrapper .container.contact_us .contactMain .formWrap #contactForm input,
+.wrapper .container.contact_us .contactMain .formWrap #contactForm textarea,
+.wrapper .container.contact_us .contactMain .formWrap #contactForm button {
+  border: 1px solid #8e8e8e;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+  font-family: 'Fira Mono', monospace;
+  background: #ffffff;
+}
+.wrapper .container.contact_us .contactMain .formWrap #contactForm label,
+.wrapper .container.contact_us .contactMain .formWrap #contactForm button {
+  color: black;
+}
+.wrapper .container.contact_us .contactMain .formWrap #contactForm input,
+.wrapper .container.contact_us .contactMain .formWrap #contactForm textarea {
+  color: black;
+}
 .wrapper .container.contact_us .paragraph {
-  text-align: center;
-  margin-top: 25px;
-  line-height: 1.5;
+  font-family: 'Fira Mono', monospace;
+  text-align: left;
 }
 .wrapper .container.services {
   display: flex;

@@ -93,10 +93,60 @@ header {
       }
     }
     &.contact_us {
+      .contactMain {
+        display: flex;
+        height: 500px;
+        .contactLets {
+          width: 50%;
+          background: #f8a408;
+          h5 {
+            &.paragraph {
+              padding: 15px;
+              color: white;
+              font-size: 30px;
+              font-weight: 900;
+            }
+          }
+          p {
+            &.paragraph {
+              padding: 15px;
+              color: black;
+              font-weight: inherit;
+            }
+          }
+        }
+        .formWrap {
+          width: 50%;
+          #contactForm {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            padding: 15px 15px 0 15px;
+            input, button {
+              height: 30px;
+            }
+            input, textarea, button {
+              border: 1px solid #8e8e8e;
+              border-radius: 5px;
+              padding: 5px;
+              outline: none;
+              font-family: 'Fira Mono', monospace;
+              background: rgb(255, 255, 255);
+            }
+            label, button {
+              color: black;
+            }
+            input, textarea {
+              color: black
+            }
+          }
+        }
+      }
       .paragraph {
-        text-align: center;
-        margin-top: 25px;
-        line-height: 1.5;
+        font-family: 'Fira Mono', monospace;
+        text-align: left;
       }
     }
 
