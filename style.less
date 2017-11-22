@@ -11,6 +11,7 @@ body {
   background-size: cover;
   font-family: 'Fira Mono', monospace;
 }
+
 a {
   text-decoration: none;
   text-align: center;
@@ -23,7 +24,7 @@ header {
   width: 100%;
   height: 50px;
   padding: 0 50px;
-  background: rgba(95, 95, 95, 0.53);
+  background: rgb(255, 255, 255);
   -webkit-box-shadow: 0px 0px 14px 0px rgba(95, 95, 95, 0.53);
   -moz-box-shadow: 0px 0px 14px 0px rgba(95, 95, 95, 0.53);
   box-shadow: 0px 0px 14px 0px rgba(95, 95, 95, 0.53);
@@ -37,7 +38,7 @@ header {
       display: block;
       width: 60px;
       height: 50px;
-      background-color: #f8c720b3;
+      background-color: #f8a408;
       img {
         width: 100%;
         height: 100%;
@@ -52,9 +53,8 @@ header {
         width: 20%;
         height: 100%;
         padding: 15px 0;
-        color: #f3d52ee6;
         &:hover {
-          color: white;
+          color: #f8a408;
         }
       }
     }
@@ -64,83 +64,23 @@ header {
     }
   }
 }
+
 .wrapper {
-  padding: 0 50px;
   width: 100%;
   height: 100%;
+  background-color: rgba(255, 255, 255, 0.69);
   .container {
     width: 100%;
-    margin-top: 100px;
-    padding: 20px;
-    background: white;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 0 14px 0 rgba(0,0,0,0.75);
-    -moz-box-shadow: 0 0 14px 0 rgba(0,0,0,0.75);
-    box-shadow: 0 0 14px 0 rgba(0,0,0,0.75);
-    .header_wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background: #f0f0f0;
-      border-radius: 5px;
-      h1 {
-        font-size: 45px;
-      }
-      img {
-        width: 120px;
-        background: #9d9d9d;
-        border-radius: 5px;
-      }
-      .contactHeader {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
-        height: 50px;
-      }
+    padding: 50px;
+    .bigLogo {
+      display: block;
+      margin: 50px auto 0 auto;
     }
-    .mainContent {
-      width: 100%;
-      border-radius: 5px;
-      margin-top: 20px;
-      padding: 20px;
-      background: #f0f0f0;
-      .contentBoard {
-        width: 100%;
-        height: 100%;
-        background: url("img/3dYellowBig.jpg");
-        border-radius: 5px;
-        .info_main {
-          display: flex;
-          height: 25%;
-          width: 100%;
-          .info_image {
-            width: 35%;
-            height: 100%;
-            &:nth-of-type(even){
-            }
-            &:nth-of-type(odd){
-            }
-            &.example_1 {
-              background: url("img/example_1.jpg") center no-repeat;
-            }
-            &.example_2 {
-              background: url("img/example_2.jpg") center no-repeat;
-            }
-            &.example_3 {
-              background: url("img/example_3.jpg") center no-repeat;
-            }
-          }
-          .info_text {
-            width: 65%;
-            height: 100%;
-            background: #0000001a;
-          }
-        }
-      }
+    h1 {
+      text-align: center;
     }
   }
 }
+
 
 
