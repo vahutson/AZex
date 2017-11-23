@@ -67,7 +67,6 @@ header nav .contacts {
 .wrapper {
   width: 100%;
   min-height: 100vh;
-  background-color: rgba(255, 255, 255, 0.65);
 }
 .wrapper .container {
   width: 100%;
@@ -195,9 +194,10 @@ header nav .contacts {
   margin-bottom: 10px;
 }
 .wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged a {
+  padding: 0 5px;
   background: #9f6b00;
   color: #fffdfa;
-  padding: 0 5px;
+  font-size: 20px;
 }
 .wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.logo_holder {
   align-items: center;
