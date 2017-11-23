@@ -23,18 +23,24 @@
 <div class="wrapper">
     <div class="container">
         <div class="main_header">
-            <div class="white_fade">
             <img src="img/logo.png" alt="" class="bigLogo">
             <h1>Житлові та комерційні рішення</h1>
             <p class="paragraph">
                 Почати будувати будинок мрії не так важко, як здається, мы вам допоможемо!<br>
                 Ми знаємо свою роботу. В нашій команді відповідальні, досвідчені, кваліфіковані спеціалісти.
             </p>
-            </div>
         </div>
+        <img src="img/pencils_shadow.png" alt="" class="bcgPencils">
     </div>
 </div>
 <script>
+    (function (){
+        let arr = document.getElementsByTagName('body');
+        window.onscroll = function() {
+            let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+            arr[0].style.backgroundPositionY = (scrolled/2) + "px";
+        }
+    })()
 </script>
 </body>
 </html>

@@ -35,14 +35,15 @@
     </div>
 </div>
 <script>
-    var arr = document.getElementsByClassName('service_item');
-    window.onscroll = function() {
-        var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-        arr[0].style.backgroundPositionY = (-scrolled/2) + "px";
-        arr[1].style.backgroundPositionY = (-scrolled/2) + "px";
-        arr[2].style.backgroundPositionY = (-scrolled/2) + "px";
-
-    }
+    (function (){
+        let arr = document.getElementsByClassName('service_item');
+        window.onscroll = function() {
+            let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+            arr[0].style.backgroundPositionY = (-scrolled/2) + "px";
+            arr[1].style.backgroundPositionY = (-scrolled/2) + "px";
+            arr[2].style.backgroundPositionY = (-scrolled/2) + "px";
+        }
+    })()
 </script>
 </body>
 </html>

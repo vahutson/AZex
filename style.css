@@ -3,12 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  height: 100%;
+}
 body {
   width: 100%;
-  height: 100vh;
-  background: url("img/bricks.jpg") center no-repeat;
-  background-size: cover;
-  font-family: sans-serif;
+  min-height: 100%;
+  background: url("img/bricks.jpg") repeat-y;
+  background-size: 100% auto;
+  font-family: 'Fira Mono', monospace, sans-serif;
 }
 a {
   text-decoration: none;
@@ -21,11 +24,10 @@ header {
   width: 100%;
   height: 50px;
   padding: 0 50px;
-  font-family: 'Fira Mono', monospace;
   background: #ffffff;
-  -webkit-box-shadow: 0px 0px 14px 0px rgba(95, 95, 95, 0.53);
-  -moz-box-shadow: 0px 0px 14px 0px rgba(95, 95, 95, 0.53);
-  box-shadow: 0px 0px 14px 0px rgba(95, 95, 95, 0.53);
+  -webkit-box-shadow: 0 0 14px 0 rgba(95, 95, 95, 0.53);
+  -moz-box-shadow: 0 0 14px 0 rgba(95, 95, 95, 0.53);
+  box-shadow: 0 0 14px 0 rgba(95, 95, 95, 0.53);
 }
 header nav {
   display: flex;
@@ -64,20 +66,31 @@ header nav .contacts {
 }
 .wrapper {
   width: 100%;
-  height: inherit;
-  background-color: rgba(255, 255, 255, 0.85);
-}
-.wrapper.services {
-  height: auto;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.65);
 }
 .wrapper .container {
   width: 100%;
   height: 100%;
-  padding: 50px;
+  padding: 50px 50px 0 50px;
+  text-align: center;
+}
+.wrapper .container .mainBcg {
+  position: absolute;
+}
+.wrapper .container .bcgPencils {
+  display: block;
+  width: 70%;
+  margin: 50px auto 0 auto;
+  z-index: -1;
+}
+.wrapper .container .main_header {
+  padding: 50px 0;
 }
 .wrapper .container .main_header .bigLogo {
   display: block;
-  margin: 50px auto 0 auto;
+  width: 250px;
+  margin: 0 auto;
 }
 .wrapper .container .main_header h1 {
   text-align: center;
@@ -106,6 +119,7 @@ header nav .contacts {
   padding: 15px;
   color: black;
   font-weight: inherit;
+  line-height: 2;
 }
 .wrapper .container.contact_us .contactMain .formWrap {
   width: 50%;
@@ -126,19 +140,75 @@ header nav .contacts {
 .wrapper .container.contact_us .contactMain .formWrap #contactForm textarea,
 .wrapper .container.contact_us .contactMain .formWrap #contactForm button {
   border: 1px solid #8e8e8e;
-  border-radius: 5px;
   padding: 5px;
   outline: none;
   font-family: 'Fira Mono', monospace;
   background: #ffffff;
 }
-.wrapper .container.contact_us .contactMain .formWrap #contactForm label,
 .wrapper .container.contact_us .contactMain .formWrap #contactForm button {
+  margin: 10px auto 0 auto;
+  width: 100%;
+  color: white;
+  border: none;
+  background: #f8a408;
+  font-size: 15px;
+  cursor: pointer;
+}
+.wrapper .container.contact_us .contactMain .formWrap #contactForm label {
   color: black;
 }
 .wrapper .container.contact_us .contactMain .formWrap #contactForm input,
 .wrapper .container.contact_us .contactMain .formWrap #contactForm textarea {
   color: black;
+}
+.wrapper .container.contact_us .contact_info_wrapper h4.paragraph {
+  margin: 25px 0;
+  text-align: center;
+  font-size: 30px;
+}
+.wrapper .container.contact_us .contact_info_wrapper .contact_info {
+  display: flex;
+}
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  padding: 15px;
+  line-height: 1.7;
+}
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info:last-of-type {
+  background: #f8a408;
+}
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info:last-of-type .info_item:first-of-type {
+  display: block;
+}
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 15px 0 25px 0;
+}
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged p,
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged b,
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged a {
+  margin-bottom: 10px;
+}
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged a {
+  background: #9f6b00;
+  color: #fffdfa;
+  padding: 0 5px;
+}
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.logo_holder {
+  align-items: center;
+}
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.logo_holder .bigLogo {
+  width: 250px;
+  background-color: black;
+  border-radius: 5px;
+}
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item a {
+  text-align: left;
 }
 .wrapper .container.contact_us .paragraph {
   font-family: 'Fira Mono', monospace;
@@ -154,7 +224,7 @@ header nav .contacts {
   width: 100%;
   height: 600px;
   background-size: contain;
-  box-shadow: inset 0px 0px 84px -12px rgba(0, 0, 0, 0.86);
+  box-shadow: inset 0 0 84px -12px rgba(0, 0, 0, 0.86);
 }
 .wrapper .container.services .service_item:nth-of-type(1) {
   background: url("img/construction.jpg");
