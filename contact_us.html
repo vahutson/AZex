@@ -90,5 +90,14 @@
         </div>
     </div>
 </div>
+<script>
+    (function (){
+        let arr = document.getElementsByTagName('body');
+        window.onscroll = function() {
+            let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+            arr[0].style.backgroundPositionY = (scrolled/2) + "px";
+        }
+    })()
+</script>
 </body>
 </html>
