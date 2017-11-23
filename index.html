@@ -30,15 +30,15 @@
                 Ми знаємо свою роботу. В нашій команді відповідальні, досвідчені, кваліфіковані спеціалісти.
             </p>
         </div>
-        <img src="img/pencils_shadow.png" alt="" class="bcgPencils">
+        <img src="img/pencils_shadow2.png" alt="" class="bcgPencils">
     </div>
 </div>
 <script>
     (function (){
-        let arr = document.getElementsByTagName('body');
+        const bodyScroll = document.getElementsByTagName('body')[0];
         window.onscroll = function() {
             let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-            arr[0].style.backgroundPositionY = (scrolled/2) + "px";
+            bodyScroll.style.backgroundPositionY = (scrolled/2) + "px";
         }
     })()
 </script>
