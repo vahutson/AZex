@@ -8,6 +8,7 @@ html {
 }
 body {
   width: 100%;
+  max-height: 100%;
   min-height: 100%;
   background: url("img/bricks.jpg") repeat-y;
   background-size: 100% auto;
@@ -70,6 +71,44 @@ header nav .contacts {
 .wrapper {
   width: 100%;
   min-height: 100vh;
+  overflow: hidden;
+}
+.wrapper .back_items_wrpapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.wrapper .back_items_wrpapper .back_item {
+  position: absolute;
+  width: 100px;
+}
+.wrapper .back_items_wrpapper .back_item:nth-of-type(odd) {
+  z-index: 2;
+}
+.wrapper .back_items_wrpapper .back_item:nth-of-type(even) {
+  z-index: 1;
+}
+.wrapper .back_items_wrpapper .back_item:nth-of-type(1),
+.wrapper .back_items_wrpapper .back_item:nth-of-type(2) {
+  left: 15%;
+}
+.wrapper .back_items_wrpapper .back_item:nth-of-type(3),
+.wrapper .back_items_wrpapper .back_item:nth-of-type(4) {
+  left: 3%;
+}
+.wrapper .back_items_wrpapper .back_item:nth-of-type(5),
+.wrapper .back_items_wrpapper .back_item:nth-of-type(6) {
+  left: 90%;
+}
+.wrapper .back_items_wrpapper .back_item:nth-of-type(7),
+.wrapper .back_items_wrpapper .back_item:nth-of-type(8) {
+  left: 60%;
+}
+.wrapper .back_items_wrpapper .back_item:nth-of-type(9),
+.wrapper .back_items_wrpapper .back_item:nth-of-type(10) {
+  width: 200px;
+  left: 80%;
 }
 .wrapper .container {
   width: 100%;
@@ -77,13 +116,22 @@ header nav .contacts {
   padding: 50px 50px 0 50px;
   text-align: center;
 }
+.wrapper .container .orange_separator {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  background: #f8a408;
+}
 .wrapper .container .mainBcg {
   position: absolute;
 }
 .wrapper .container .bcgPencils {
   display: block;
-  width: 50%;
-  margin: 50px auto 0 auto;
+  position: absolute;
+  left: 40%;
+  bottom: 0;
+  width: 20%;
+  margin: 0 auto 0 auto;
   z-index: -1;
 }
 .wrapper .container .main_header {

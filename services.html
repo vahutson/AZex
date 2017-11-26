@@ -36,7 +36,7 @@
 </div>
 <script>
     (function (){
-        let arr = document.getElementsByClassName('service_item');
+        const arr = document.getElementsByClassName('service_item');
         window.onscroll = function() {
             let scrolled = window.pageYOffset || document.documentElement.scrollTop;
             arr[0].style.backgroundPositionY = (-scrolled/2) + "px";

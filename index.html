@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
     <title>Title</title>
 </head>
 <body>
@@ -21,6 +25,18 @@
     </nav>
 </header>
 <div class="wrapper">
+    <div class="back_items_wrpapper">
+        <img src="img/back_item_1.png" alt="" class="back_item" style="top: 200px" data-speed="1">
+        <img src="img/back_item_1_s-1.png" alt="" class="back_item" style="top: 230px" data-speed="1">
+        <img src="img/back_item_2.png" alt="" class="back_item" style="top: 480px" data-speed="2">
+        <img src="img/back_item_2_s-1.png" alt="" class="back_item" style="top: 500px" data-speed="2">
+        <img src="img/back_item_3.png" alt="" class="back_item" style="top: 52px" data-speed="1">
+        <img src="img/back_item_3_s-1.png" alt="" class="back_item" style="top: 75px" data-speed="1">
+        <img src="img/back_item_4.png" alt="" class="back_item" style="top: 100px" data-speed="2">
+        <img src="img/back_item_4_s-1.png" alt="" class="back_item" style="top: 120px" data-speed="2">
+        <img src="img/back_item_4.png" alt="" class="back_item" style="top: 280px" data-speed="1">
+        <img src="img/back_item_4_s-1.png" alt="" class="back_item" style="top: 380px" data-speed="1">
+    </div>
     <div class="container">
         <div class="main_header">
             <img src="img/logo.png" alt="" class="bigLogo">
@@ -36,10 +52,30 @@
 <script>
     (function (){
         const bodyScroll = document.getElementsByTagName('body')[0];
+        const backItems = $('.back_item');
+        let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        let deg = 1;
+
         window.onscroll = function() {
-            let scrolled = window.pageYOffset || document.documentElement.scrollTop;
             bodyScroll.style.backgroundPositionY = (scrolled/2) + "px";
-        }
+            let scrolledNow = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrolledNow > scrolled) {
+                $(backItems).each(function () {
+                    let speed = parseInt($(this).attr('data-speed'));
+                    this.style.top = parseInt(this.style.top) + speed + "px";
+                    $(this).css('transform', `rotateZ(${deg*speed}deg)`);
+                    deg += 0.1;
+                })
+            } else {
+                $(backItems).each(function () {
+                    let speed = parseInt($(this).attr('data-speed'));
+                    this.style.top = parseInt(this.style.top) - speed + "px";
+                    $(this).css('transform', `rotateZ(${deg*speed}deg)`);
+                    deg -= 0.1;
+                })
+            }
+            scrolled = scrolledNow;
+        };
     })()
 </script>
 </body>
