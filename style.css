@@ -84,42 +84,84 @@ header nav .contacts {
   width: 100px;
   filter: blur(2px);
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(1) {
+.wrapper .back_items_wrapper .back_item:nth-of-type(odd) {
+  z-index: 0;
+}
+.wrapper .back_items_wrapper .back_item:nth-of-type(even) {
+  z-index: -1;
+  opacity: 0.5;
+}
+.wrapper .back_items_wrapper .back_item:nth-of-type(1),
+.wrapper .back_items_wrapper .back_item:nth-of-type(2) {
   top: 15%;
   right: 5%;
 }
 .wrapper .back_items_wrapper .back_item:nth-of-type(2) {
+  top: 20%;
+  right: 2%;
+}
+.wrapper .back_items_wrapper .back_item:nth-of-type(3),
+.wrapper .back_items_wrapper .back_item:nth-of-type(4) {
   top: 50%;
   left: 5%;
   width: 150px;
   filter: blur(1px);
   transform: rotateZ(160deg);
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(3) {
+.wrapper .back_items_wrapper .back_item:nth-of-type(4) {
+  top: 60%;
+  left: 7%;
+}
+.wrapper .back_items_wrapper .back_item:nth-of-type(5),
+.wrapper .back_items_wrapper .back_item:nth-of-type(6) {
   top: 80%;
   left: 30%;
   transform: rotateZ(60deg);
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(4) {
+.wrapper .back_items_wrapper .back_item:nth-of-type(6) {
+  top: 85%;
+  left: 33%;
+}
+.wrapper .back_items_wrapper .back_item:nth-of-type(7),
+.wrapper .back_items_wrapper .back_item:nth-of-type(8) {
   top: 20%;
   left: 22%;
   width: 140px;
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(5) {
+.wrapper .back_items_wrapper .back_item:nth-of-type(8) {
+  top: 30%;
+  left: 25%;
+}
+.wrapper .back_items_wrapper .back_item:nth-of-type(9),
+.wrapper .back_items_wrapper .back_item:nth-of-type(10) {
   top: 50%;
   right: 10%;
   width: 130px;
   filter: blur(1px);
   transform: rotateZ(19deg);
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(6) {
+.wrapper .back_items_wrapper .back_item:nth-of-type(10) {
+  top: 60%;
+  right: 7%;
+}
+.wrapper .back_items_wrapper .back_item:nth-of-type(11),
+.wrapper .back_items_wrapper .back_item:nth-of-type(12) {
   top: 10%;
   left: 5%;
   filter: blur(1px);
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(7) {
-  top: 70%;
-  right: 30%;
+.wrapper .back_items_wrapper .back_item:nth-of-type(12) {
+  top: 15%;
+  left: 7%;
+}
+.wrapper .back_items_wrapper .back_item:nth-of-type(13),
+.wrapper .back_items_wrapper .back_item:nth-of-type(14) {
+  top: 80%;
+  right: 20%;
+}
+.wrapper .back_items_wrapper .back_item:nth-of-type(14) {
+  top: 85%;
+  right: 17%;
 }
 .wrapper .back_items_wrapper .container {
   position: relative;

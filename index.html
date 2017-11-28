@@ -27,13 +27,27 @@
         </nav>
     </header>
     <div class="back_items_wrapper">
-        <img src="img/back_item_4.png" alt="" class="back_item" data-speed="1" data-angle="">
-        <img src="img/back_item_4.png" alt="" class="back_item" data-speed="3" data-angle="">
-        <img src="img/back_item_4.png" alt="" class="back_item" data-speed="1" data-angle="">
-        <img src="img/back_item_1.png" alt="" class="back_item" data-speed="3" data-angle="">
-        <img src="img/back_item_2.png" alt="" class="back_item" data-speed="3" data-angle="">
-        <img src="img/back_item_3.png" alt="" class="back_item" data-speed="1" data-angle="">
-        <img src="img/back_item_3.png" alt="" class="back_item" data-speed="1" data-angle="">
+        <img src="img/back_item_4.png" alt="" class="back_item" data-speed="1" data-angle="0">
+        <img src="img/back_item_4_s-1.png" alt="" class="back_item" data-speed="1" data-angle="0">
+
+        <img src="img/back_item_4.png" alt="" class="back_item" data-speed="3" data-angle="160">
+        <img src="img/back_item_4_s-1.png" alt="" class="back_item" data-speed="3" data-angle="160">
+
+        <img src="img/back_item_4.png" alt="" class="back_item" data-speed="1" data-angle="60">
+        <img src="img/back_item_4_s-1.png" alt="" class="back_item" data-speed="1" data-angle="60">
+
+        <img src="img/back_item_1.png" alt="" class="back_item" data-speed="3" data-angle="0">
+        <img src="img/back_item_1_s-1.png" alt="" class="back_item" data-speed="3" data-angle="0">
+
+        <img src="img/back_item_2.png" alt="" class="back_item" data-speed="3" data-angle="19">
+        <img src="img/back_item_2_s-1.png" alt="" class="back_item" data-speed="3" data-angle="19">
+
+        <img src="img/back_item_3.png" alt="" class="back_item" data-speed="1" data-angle="0">
+        <img src="img/back_item_3_s-1.png" alt="" class="back_item" data-speed="1" data-angle="0">
+
+        <img src="img/back_item_3.png" alt="" class="back_item" data-speed="1" data-angle="0">
+        <img src="img/back_item_3_s-1.png" alt="" class="back_item" data-speed="1" data-angle="0">
+
     </div>
     <div class="container">
         <div class="main_header">
@@ -51,28 +65,15 @@
     (function (){
         const bodyScroll = document.getElementsByTagName('body')[0];
         const backItems = $('.back_item');
-        let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-        let deg = 1;
 
         window.onscroll = function() {
-            bodyScroll.style.backgroundPositionY = (scrolled/2) + "px";
-            let scrolledNow = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrolledNow > scrolled) {
-                $(backItems).each(function () {
-                    let speed = parseInt($(this).attr('data-speed'));
-                    this.style.top = parseInt(this.style.top) + speed + "px";
-                    $(this).css('transform', `rotateZ(${deg*speed}deg)`);
-                    deg += 0.1;
-                })
-            } else {
-                $(backItems).each(function () {
-                    let speed = parseInt($(this).attr('data-speed'));
-                    this.style.top = parseInt(this.style.top) - speed + "px";
-                    $(this).css('transform', `rotateZ(${deg*speed}deg)`);
-                    deg -= 0.1;
-                })
-            }
-            scrolled = scrolledNow;
+            let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+            bodyScroll.style.backgroundPositionY = (scrolled / 2) + "px";
+            $(backItems).each(function () {
+                let speed = parseInt($(this).attr('data-speed'));
+                let angle = parseInt($(this).attr('data-angle'));
+                $(this).css('transform', `translateY(${ - scrolled * speed}px) rotateZ(${angle + scrolled}deg)`);
+            });
         };
     })()
 </script>

@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
     <title>Title</title>
 </head>
 <body>
@@ -21,6 +25,29 @@
     </nav>
 </header>
 <div class="wrapper">
+    <div class="back_items_wrapper" style="top: 400px">
+        <img src="img/back_item_4.png" alt="" class="back_item" data-speed="1" data-angle="0">
+        <img src="img/back_item_4_s-1.png" alt="" class="back_item" data-speed="1" data-angle="0">
+
+        <img src="img/back_item_4.png" alt="" class="back_item" data-speed="3" data-angle="160">
+        <img src="img/back_item_4_s-1.png" alt="" class="back_item" data-speed="3" data-angle="160">
+
+        <img src="img/back_item_4.png" alt="" class="back_item" data-speed="1" data-angle="60">
+        <img src="img/back_item_4_s-1.png" alt="" class="back_item" data-speed="1" data-angle="60">
+
+        <img src="img/back_item_1.png" alt="" class="back_item" data-speed="3" data-angle="0">
+        <img src="img/back_item_1_s-1.png" alt="" class="back_item" data-speed="3" data-angle="0">
+
+        <img src="img/back_item_2.png" alt="" class="back_item" data-speed="3" data-angle="19">
+        <img src="img/back_item_2_s-1.png" alt="" class="back_item" data-speed="3" data-angle="19">
+
+        <img src="img/back_item_3.png" alt="" class="back_item" data-speed="1" data-angle="0">
+        <img src="img/back_item_3_s-1.png" alt="" class="back_item" data-speed="1" data-angle="0">
+
+        <img src="img/back_item_3.png" alt="" class="back_item" data-speed="1" data-angle="0">
+        <img src="img/back_item_3_s-1.png" alt="" class="back_item" data-speed="1" data-angle="0">
+
+    </div>
     <div class="container contact_us">
         <div class="contactMain">
             <div class="contactLets">
@@ -93,10 +120,17 @@
 <script>
     (function (){
         const bodyScroll = document.getElementsByTagName('body')[0];
+        const backItems = $('.back_item');
+
         window.onscroll = function() {
             let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-            bodyScroll.style.backgroundPositionY = (scrolled/2) + "px";
-        }
+            bodyScroll.style.backgroundPositionY = (scrolled / 2) + "px";
+            $(backItems).each(function () {
+                let speed = parseInt($(this).attr('data-speed'));
+                let angle = parseInt($(this).attr('data-angle'));
+                $(this).css('transform', `translateY(${ - scrolled * speed}px) rotateZ(${angle + scrolled}deg)`);
+            });
+        };
     })()
 </script>
 </body>
