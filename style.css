@@ -72,7 +72,6 @@ header nav .contacts {
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-<<<<<<< HEAD
 }
 .wrapper .back_items_wrapper {
   position: absolute;
@@ -122,78 +121,26 @@ header nav .contacts {
   top: 70%;
   right: 30%;
 }
-.container {
-=======
-}
-.wrapper .back_items_wrpapper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-.wrapper .back_items_wrpapper .back_item {
-  position: absolute;
-  width: 100px;
-}
-.wrapper .back_items_wrpapper .back_item:nth-of-type(odd) {
-  z-index: 2;
-}
-.wrapper .back_items_wrpapper .back_item:nth-of-type(even) {
-  z-index: 1;
-}
-.wrapper .back_items_wrpapper .back_item:nth-of-type(1),
-.wrapper .back_items_wrpapper .back_item:nth-of-type(2) {
-  left: 15%;
-}
-.wrapper .back_items_wrpapper .back_item:nth-of-type(3),
-.wrapper .back_items_wrpapper .back_item:nth-of-type(4) {
-  left: 3%;
-}
-.wrapper .back_items_wrpapper .back_item:nth-of-type(5),
-.wrapper .back_items_wrpapper .back_item:nth-of-type(6) {
-  left: 90%;
-}
-.wrapper .back_items_wrpapper .back_item:nth-of-type(7),
-.wrapper .back_items_wrpapper .back_item:nth-of-type(8) {
-  left: 60%;
-}
-.wrapper .back_items_wrpapper .back_item:nth-of-type(9),
-.wrapper .back_items_wrpapper .back_item:nth-of-type(10) {
-  width: 200px;
-  left: 80%;
-}
-.wrapper .container {
->>>>>>> 787d8f5e9bf6d4d6e54356dcac34ba1dd2c84a0a
+.wrapper .back_items_wrapper .container {
   position: relative;
   width: 100%;
   height: 100%;
   padding: 50px 50px 150px 50px;
   text-align: center;
 }
-<<<<<<< HEAD
-.container.second {
+.wrapper .back_items_wrapper .container.second {
   padding: 0;
 }
-.container .orange_separator {
-=======
-.wrapper .container.second {
-  padding: 0;
-}
-.wrapper .container .orange_separator {
->>>>>>> 787d8f5e9bf6d4d6e54356dcac34ba1dd2c84a0a
+.wrapper .back_items_wrapper .container .orange_separator {
   font-size: 50px;
   color: white;
   text-align: center;
   background: #f8a408;
 }
-<<<<<<< HEAD
-.container .mainBcg {
-=======
-.wrapper .container .mainBcg {
->>>>>>> 787d8f5e9bf6d4d6e54356dcac34ba1dd2c84a0a
+.wrapper .back_items_wrapper .container .mainBcg {
   position: absolute;
 }
-.container .bcgPencils {
+.wrapper .back_items_wrapper .container .bcgPencils {
   display: block;
   position: absolute;
   left: 40%;
@@ -202,48 +149,87 @@ header nav .contacts {
   margin: 0 auto 0 auto;
   z-index: -1;
 }
-.container .main_header {
+.wrapper .back_items_wrapper .container .main_header {
   padding: 50px 0;
 }
-.container .main_header .bigLogo {
+.wrapper .back_items_wrapper .container .main_header .bigLogo {
   display: block;
   width: 250px;
   margin: 0 auto;
 }
-.container .main_header h1 {
-  text-align: center;
-  font-weight: lighter;
-}
-.container .main_header .paragraph {
+.wrapper .back_items_wrapper .container .main_header .paragraph {
   text-align: center;
   margin-top: 50px;
   font-size: 18px;
   line-height: 1.5;
 }
-.container.contact_us .contactMain {
+.wrapper .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 50px 50px 150px 50px;
+  text-align: center;
+}
+.wrapper .container .orange_separator {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  background: #f8a408;
+}
+.wrapper .container .mainBcg {
+  position: absolute;
+}
+.wrapper .container .bcgPencils {
+  display: block;
+  position: absolute;
+  left: 40%;
+  bottom: 0;
+  width: 20%;
+  margin: 0 auto 0 auto;
+  z-index: -1;
+}
+.wrapper .container .main_header {
+  padding: 50px 0;
+}
+.wrapper .container .main_header .bigLogo {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+}
+.wrapper .container .main_header h1 {
+  text-align: center;
+  font-weight: lighter;
+}
+.wrapper .container .main_header .paragraph {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.wrapper .container.contact_us .contactMain {
   display: flex;
   height: 500px;
 }
-.container.contact_us .contactMain .contactLets {
+.wrapper .container.contact_us .contactMain .contactLets {
   width: 50%;
   background: #f8a408;
 }
-.container.contact_us .contactMain .contactLets h5.paragraph {
+.wrapper .container.contact_us .contactMain .contactLets h5.paragraph {
   padding: 15px;
   color: white;
   font-size: 30px;
   font-weight: 900;
 }
-.container.contact_us .contactMain .contactLets p.paragraph {
+.wrapper .container.contact_us .contactMain .contactLets p.paragraph {
   padding: 15px;
   color: black;
   font-weight: inherit;
   line-height: 2;
 }
-.container.contact_us .contactMain .formWrap {
+.wrapper .container.contact_us .contactMain .formWrap {
   width: 50%;
 }
-.container.contact_us .contactMain .formWrap #contactForm {
+.wrapper .container.contact_us .contactMain .formWrap #contactForm {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -251,20 +237,20 @@ header nav .contacts {
   width: 100%;
   padding: 15px 15px 0 15px;
 }
-.container.contact_us .contactMain .formWrap #contactForm input,
-.container.contact_us .contactMain .formWrap #contactForm button {
+.wrapper .container.contact_us .contactMain .formWrap #contactForm input,
+.wrapper .container.contact_us .contactMain .formWrap #contactForm button {
   height: 30px;
 }
-.container.contact_us .contactMain .formWrap #contactForm input,
-.container.contact_us .contactMain .formWrap #contactForm textarea,
-.container.contact_us .contactMain .formWrap #contactForm button {
+.wrapper .container.contact_us .contactMain .formWrap #contactForm input,
+.wrapper .container.contact_us .contactMain .formWrap #contactForm textarea,
+.wrapper .container.contact_us .contactMain .formWrap #contactForm button {
   border: 1px solid #8e8e8e;
   padding: 5px;
   outline: none;
   font-family: 'Fira Mono', monospace;
   background: #ffffff;
 }
-.container.contact_us .contactMain .formWrap #contactForm button {
+.wrapper .container.contact_us .contactMain .formWrap #contactForm button {
   margin: 10px auto 0 auto;
   width: 100%;
   color: white;
@@ -273,22 +259,22 @@ header nav .contacts {
   font-size: 15px;
   cursor: pointer;
 }
-.container.contact_us .contactMain .formWrap #contactForm label {
+.wrapper .container.contact_us .contactMain .formWrap #contactForm label {
   color: black;
 }
-.container.contact_us .contactMain .formWrap #contactForm input,
-.container.contact_us .contactMain .formWrap #contactForm textarea {
+.wrapper .container.contact_us .contactMain .formWrap #contactForm input,
+.wrapper .container.contact_us .contactMain .formWrap #contactForm textarea {
   color: black;
 }
-.container.contact_us .contact_info_wrapper h4.paragraph {
+.wrapper .container.contact_us .contact_info_wrapper h4.paragraph {
   margin: 25px 0;
   text-align: center;
   font-size: 30px;
 }
-.container.contact_us .contact_info_wrapper .contact_info {
+.wrapper .container.contact_us .contact_info_wrapper .contact_info {
   display: flex;
 }
-.container.contact_us .contact_info_wrapper .contact_info .flex_info {
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -296,66 +282,66 @@ header nav .contacts {
   padding: 15px;
   line-height: 1.7;
 }
-.container.contact_us .contact_info_wrapper .contact_info .flex_info:last-of-type {
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info:last-of-type {
   background: #f8a408;
 }
-.container.contact_us .contact_info_wrapper .contact_info .flex_info:last-of-type .info_item:first-of-type {
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info:last-of-type .info_item:first-of-type {
   display: block;
 }
-.container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item {
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 15px 0 25px 0;
 }
-.container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged p,
-.container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged b,
-.container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged a {
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged p,
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged b,
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged a {
   margin-bottom: 10px;
 }
-.container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged a {
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged a {
   padding: 0 5px;
   background: #9f6b00;
   color: #fffdfa;
   font-size: 20px;
 }
-.container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.logo_holder {
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.logo_holder {
   align-items: center;
 }
-.container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.logo_holder .bigLogo {
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.logo_holder .bigLogo {
   width: 250px;
   background-color: black;
   border-radius: 5px;
 }
-.container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item a {
+.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item a {
   text-align: left;
 }
-.container.contact_us .paragraph {
+.wrapper .container.contact_us .paragraph {
   font-family: 'Fira Mono', monospace;
   text-align: left;
 }
-.container.services {
+.wrapper .container.services {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   padding: 50px 0 0 0;
 }
-.container.services .service_item {
+.wrapper .container.services .service_item {
   width: 100%;
   height: 625px;
   background-size: contain;
   box-shadow: inset 0 0 84px -12px rgba(0, 0, 0, 0.86);
 }
-.container.services .service_item:nth-of-type(1) {
+.wrapper .container.services .service_item:nth-of-type(1) {
   background: url("img/construction.jpg");
 }
-.container.services .service_item:nth-of-type(2) {
+.wrapper .container.services .service_item:nth-of-type(2) {
   background: url("img/Scp3M.jpg");
 }
-.container.services .service_item:nth-of-type(3) {
+.wrapper .container.services .service_item:nth-of-type(3) {
   background: url("img/maxresdefault.jpg");
 }
-.container.services .service_item h3 {
+.wrapper .container.services .service_item h3 {
   text-align: center;
   color: #ffffff;
   background: #f8a408;
