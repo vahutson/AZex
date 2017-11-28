@@ -8,10 +8,13 @@ html {
 }
 body {
   width: 100%;
+  max-height: 100%;
   min-height: 100%;
   background: url("img/bricks.jpg") repeat-y;
   background-size: 100% auto;
   font-family: 'Fira Mono', monospace, sans-serif;
+  overflow-x: hidden;
+  z-index: -5;
 }
 a {
   text-decoration: none;
@@ -28,6 +31,7 @@ header {
   -webkit-box-shadow: 0 0 14px 0 rgba(95, 95, 95, 0.53);
   -moz-box-shadow: 0 0 14px 0 rgba(95, 95, 95, 0.53);
   box-shadow: 0 0 14px 0 rgba(95, 95, 95, 0.53);
+  z-index: 10;
 }
 header nav {
   display: flex;
@@ -67,63 +71,126 @@ header nav .contacts {
 .wrapper {
   width: 100%;
   min-height: 100vh;
+  overflow: hidden;
 }
-.wrapper .container {
+.wrapper .back_items_wrapper {
+  position: absolute;
   width: 100%;
   height: 100%;
-  padding: 50px 50px 0 50px;
-  text-align: center;
-}
-.wrapper .container .mainBcg {
-  position: absolute;
-}
-.wrapper .container .bcgPencils {
-  display: block;
-  width: 70%;
-  margin: 50px auto 0 auto;
   z-index: -1;
 }
-.wrapper .container .main_header {
+.wrapper .back_items_wrapper .back_item {
+  position: absolute;
+  width: 100px;
+  filter: blur(2px);
+}
+.wrapper .back_items_wrapper .back_item:nth-of-type(1) {
+  top: 15%;
+  right: 5%;
+}
+.wrapper .back_items_wrapper .back_item:nth-of-type(2) {
+  top: 50%;
+  left: 5%;
+  width: 150px;
+  filter: blur(1px);
+  transform: rotateZ(160deg);
+}
+.wrapper .back_items_wrapper .back_item:nth-of-type(3) {
+  top: 80%;
+  left: 30%;
+  transform: rotateZ(60deg);
+}
+.wrapper .back_items_wrapper .back_item:nth-of-type(4) {
+  top: 20%;
+  left: 22%;
+  width: 140px;
+}
+.wrapper .back_items_wrapper .back_item:nth-of-type(5) {
+  top: 50%;
+  right: 10%;
+  width: 130px;
+  filter: blur(1px);
+  transform: rotateZ(19deg);
+}
+.wrapper .back_items_wrapper .back_item:nth-of-type(6) {
+  top: 10%;
+  left: 5%;
+  filter: blur(1px);
+}
+.wrapper .back_items_wrapper .back_item:nth-of-type(7) {
+  top: 70%;
+  right: 30%;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 50px 50px 150px 50px;
+  text-align: center;
+}
+.container.second {
+  padding: 0;
+}
+.container .orange_separator {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  background: #f8a408;
+}
+.container .mainBcg {
+  position: absolute;
+}
+.container .bcgPencils {
+  display: block;
+  position: absolute;
+  left: 40%;
+  bottom: 0;
+  width: 20%;
+  margin: 0 auto 0 auto;
+  z-index: -1;
+}
+.container .main_header {
   padding: 50px 0;
 }
-.wrapper .container .main_header .bigLogo {
+.container .main_header .bigLogo {
   display: block;
   width: 250px;
   margin: 0 auto;
 }
-.wrapper .container .main_header h1 {
+.container .main_header h1 {
   text-align: center;
   font-weight: lighter;
 }
-.wrapper .container .main_header .paragraph {
+.container .main_header .paragraph {
   text-align: center;
-  margin-top: 25px;
+  margin-top: 50px;
+  font-size: 18px;
   line-height: 1.5;
 }
-.wrapper .container.contact_us .contactMain {
+.container.contact_us .contactMain {
   display: flex;
   height: 500px;
 }
-.wrapper .container.contact_us .contactMain .contactLets {
+.container.contact_us .contactMain .contactLets {
   width: 50%;
   background: #f8a408;
 }
-.wrapper .container.contact_us .contactMain .contactLets h5.paragraph {
+.container.contact_us .contactMain .contactLets h5.paragraph {
   padding: 15px;
   color: white;
   font-size: 30px;
   font-weight: 900;
 }
-.wrapper .container.contact_us .contactMain .contactLets p.paragraph {
+.container.contact_us .contactMain .contactLets p.paragraph {
   padding: 15px;
   color: black;
   font-weight: inherit;
   line-height: 2;
 }
-.wrapper .container.contact_us .contactMain .formWrap {
+.container.contact_us .contactMain .formWrap {
   width: 50%;
 }
-.wrapper .container.contact_us .contactMain .formWrap #contactForm {
+.container.contact_us .contactMain .formWrap #contactForm {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -131,20 +198,20 @@ header nav .contacts {
   width: 100%;
   padding: 15px 15px 0 15px;
 }
-.wrapper .container.contact_us .contactMain .formWrap #contactForm input,
-.wrapper .container.contact_us .contactMain .formWrap #contactForm button {
+.container.contact_us .contactMain .formWrap #contactForm input,
+.container.contact_us .contactMain .formWrap #contactForm button {
   height: 30px;
 }
-.wrapper .container.contact_us .contactMain .formWrap #contactForm input,
-.wrapper .container.contact_us .contactMain .formWrap #contactForm textarea,
-.wrapper .container.contact_us .contactMain .formWrap #contactForm button {
+.container.contact_us .contactMain .formWrap #contactForm input,
+.container.contact_us .contactMain .formWrap #contactForm textarea,
+.container.contact_us .contactMain .formWrap #contactForm button {
   border: 1px solid #8e8e8e;
   padding: 5px;
   outline: none;
   font-family: 'Fira Mono', monospace;
   background: #ffffff;
 }
-.wrapper .container.contact_us .contactMain .formWrap #contactForm button {
+.container.contact_us .contactMain .formWrap #contactForm button {
   margin: 10px auto 0 auto;
   width: 100%;
   color: white;
@@ -153,22 +220,22 @@ header nav .contacts {
   font-size: 15px;
   cursor: pointer;
 }
-.wrapper .container.contact_us .contactMain .formWrap #contactForm label {
+.container.contact_us .contactMain .formWrap #contactForm label {
   color: black;
 }
-.wrapper .container.contact_us .contactMain .formWrap #contactForm input,
-.wrapper .container.contact_us .contactMain .formWrap #contactForm textarea {
+.container.contact_us .contactMain .formWrap #contactForm input,
+.container.contact_us .contactMain .formWrap #contactForm textarea {
   color: black;
 }
-.wrapper .container.contact_us .contact_info_wrapper h4.paragraph {
+.container.contact_us .contact_info_wrapper h4.paragraph {
   margin: 25px 0;
   text-align: center;
   font-size: 30px;
 }
-.wrapper .container.contact_us .contact_info_wrapper .contact_info {
+.container.contact_us .contact_info_wrapper .contact_info {
   display: flex;
 }
-.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info {
+.container.contact_us .contact_info_wrapper .contact_info .flex_info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -176,66 +243,66 @@ header nav .contacts {
   padding: 15px;
   line-height: 1.7;
 }
-.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info:last-of-type {
+.container.contact_us .contact_info_wrapper .contact_info .flex_info:last-of-type {
   background: #f8a408;
 }
-.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info:last-of-type .info_item:first-of-type {
+.container.contact_us .contact_info_wrapper .contact_info .flex_info:last-of-type .info_item:first-of-type {
   display: block;
 }
-.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item {
+.container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 15px 0 25px 0;
 }
-.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged p,
-.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged b,
-.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged a {
+.container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged p,
+.container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged b,
+.container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged a {
   margin-bottom: 10px;
 }
-.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged a {
+.container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.marged a {
   padding: 0 5px;
   background: #9f6b00;
   color: #fffdfa;
   font-size: 20px;
 }
-.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.logo_holder {
+.container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.logo_holder {
   align-items: center;
 }
-.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.logo_holder .bigLogo {
+.container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item.logo_holder .bigLogo {
   width: 250px;
   background-color: black;
   border-radius: 5px;
 }
-.wrapper .container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item a {
+.container.contact_us .contact_info_wrapper .contact_info .flex_info .info_item a {
   text-align: left;
 }
-.wrapper .container.contact_us .paragraph {
+.container.contact_us .paragraph {
   font-family: 'Fira Mono', monospace;
   text-align: left;
 }
-.wrapper .container.services {
+.container.services {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   padding: 50px 0 0 0;
 }
-.wrapper .container.services .service_item {
+.container.services .service_item {
   width: 100%;
-  height: 600px;
+  height: 625px;
   background-size: contain;
   box-shadow: inset 0 0 84px -12px rgba(0, 0, 0, 0.86);
 }
-.wrapper .container.services .service_item:nth-of-type(1) {
+.container.services .service_item:nth-of-type(1) {
   background: url("img/construction.jpg");
 }
-.wrapper .container.services .service_item:nth-of-type(2) {
+.container.services .service_item:nth-of-type(2) {
   background: url("img/Scp3M.jpg");
 }
-.wrapper .container.services .service_item:nth-of-type(3) {
+.container.services .service_item:nth-of-type(3) {
   background: url("img/maxresdefault.jpg");
 }
-.wrapper .container.services .service_item h3 {
+.container.services .service_item h3 {
   text-align: center;
   color: #ffffff;
   background: #f8a408;

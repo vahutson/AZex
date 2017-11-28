@@ -4,23 +4,37 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
     <title>Title</title>
 </head>
 <body>
-<header>
-    <nav>
-        <a href="index.html" class="logo">
-            <img src="img/logo.png" alt="">
-        </a>
-        <div class="nav-bar">
-            <a href="services.html" class="nav-item">Послуги</a>
-            <a href="#" class="nav-item">Приклади робiт</a>
-            <a href="#" class="nav-item">Вартiсть</a>
-            <a href="contact_us.html" class="nav-item">Контакти</a>
-        </div>
-    </nav>
-</header>
+
 <div class="wrapper">
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="">
+            </a>
+            <div class="nav-bar">
+                <a href="services.html" class="nav-item">Послуги</a>
+                <a href="#" class="nav-item">Приклади робiт</a>
+                <a href="#" class="nav-item">Вартiсть</a>
+                <a href="contact_us.html" class="nav-item">Контакти</a>
+            </div>
+        </nav>
+    </header>
+    <div class="back_items_wrapper">
+        <img src="img/back_item_4.png" alt="" class="back_item" data-speed="1" data-angle="">
+        <img src="img/back_item_4.png" alt="" class="back_item" data-speed="3" data-angle="">
+        <img src="img/back_item_4.png" alt="" class="back_item" data-speed="1" data-angle="">
+        <img src="img/back_item_1.png" alt="" class="back_item" data-speed="3" data-angle="">
+        <img src="img/back_item_2.png" alt="" class="back_item" data-speed="3" data-angle="">
+        <img src="img/back_item_3.png" alt="" class="back_item" data-speed="1" data-angle="">
+        <img src="img/back_item_3.png" alt="" class="back_item" data-speed="1" data-angle="">
+    </div>
     <div class="container">
         <div class="main_header">
             <img src="img/logo.png" alt="" class="bigLogo">
@@ -30,16 +44,37 @@
                 Ми знаємо свою роботу. В нашій команді відповідальні, досвідчені, кваліфіковані спеціалісти.
             </p>
         </div>
-        <img src="img/pencils_shadow.png" alt="" class="bcgPencils">
+    </div>
+    <div class="container second">
     </div>
 </div>
 <script>
     (function (){
-        let arr = document.getElementsByTagName('body');
+        const bodyScroll = document.getElementsByTagName('body')[0];
+        const backItems = $('.back_item');
+        let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        let deg = 1;
+
         window.onscroll = function() {
-            let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-            arr[0].style.backgroundPositionY = (scrolled/2) + "px";
-        }
+            bodyScroll.style.backgroundPositionY = (scrolled/2) + "px";
+            let scrolledNow = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrolledNow > scrolled) {
+                $(backItems).each(function () {
+                    let speed = parseInt($(this).attr('data-speed'));
+                    this.style.top = parseInt(this.style.top) + speed + "px";
+                    $(this).css('transform', `rotateZ(${deg*speed}deg)`);
+                    deg += 0.1;
+                })
+            } else {
+                $(backItems).each(function () {
+                    let speed = parseInt($(this).attr('data-speed'));
+                    this.style.top = parseInt(this.style.top) - speed + "px";
+                    $(this).css('transform', `rotateZ(${deg*speed}deg)`);
+                    deg -= 0.1;
+                })
+            }
+            scrolled = scrolledNow;
+        };
     })()
 </script>
 </body>
