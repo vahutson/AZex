@@ -25,29 +25,6 @@
     </nav>
 </header>
 <div class="wrapper">
-    <div class="back_items_wrapper" style="top: 400px">
-        <img src="img/back_item_4.png" alt="" class="back_item" data-speed="1" data-angle="0">
-        <img src="img/back_item_4_s-1.png" alt="" class="back_item" data-speed="1" data-angle="0">
-
-        <img src="img/back_item_4.png" alt="" class="back_item" data-speed="3" data-angle="160">
-        <img src="img/back_item_4_s-1.png" alt="" class="back_item" data-speed="3" data-angle="160">
-
-        <img src="img/back_item_4.png" alt="" class="back_item" data-speed="1" data-angle="60">
-        <img src="img/back_item_4_s-1.png" alt="" class="back_item" data-speed="1" data-angle="60">
-
-        <img src="img/back_item_1.png" alt="" class="back_item" data-speed="3" data-angle="0">
-        <img src="img/back_item_1_s-1.png" alt="" class="back_item" data-speed="3" data-angle="0">
-
-        <img src="img/back_item_2.png" alt="" class="back_item" data-speed="3" data-angle="19">
-        <img src="img/back_item_2_s-1.png" alt="" class="back_item" data-speed="3" data-angle="19">
-
-        <img src="img/back_item_3.png" alt="" class="back_item" data-speed="1" data-angle="0">
-        <img src="img/back_item_3_s-1.png" alt="" class="back_item" data-speed="1" data-angle="0">
-
-        <img src="img/back_item_3.png" alt="" class="back_item" data-speed="1" data-angle="0">
-        <img src="img/back_item_3_s-1.png" alt="" class="back_item" data-speed="1" data-angle="0">
-
-    </div>
     <div class="container contact_us">
         <div class="contactMain">
             <div class="contactLets">
@@ -77,59 +54,60 @@
                     <textarea id="textArea" rows="6"></textarea>
                     <button type="submit">Надiслати</button>
                 </form>
-            </div>
-        </div>
-        <div class="contact_info_wrapper">
-            <h4 class="paragraph">Наші контакти:</h4>
-            <div class="contact_info">
-                <div class="flex_info">
-                </div>
-                <div class="flex_info paragraph">
-                    <div class="info_item marged">
-                        <a href="mailto:azexproject@gmail.com ">azexproject@gmail.com</a><br>
-                        <a href="tel: +380937532319 ">093 753 23 19</a><br>
-                        <a href="tel: +380505272660 ">050 527 26 60</a><br>
-                    </div>
-                    <div class="info_item">
-                        <b>Viber:</b>
-                        <p>+380937532319</p>
-                    </div>
-                    <div class="info_item">
-                        <b>Юридична адреса:</b>
-                        <p>Житомирська область,</p>
-                        <p>смт. Іршанськ, вул. Шевченка, 24, к.24, п.і. 12110</p>
-                    </div>
-                    <div class="info_item">
-                        <b>Види діяльності:</b>
-                        <p> - діяльність у сфері архітектури (основний);</p>
-                        <p> - діяльність у сфері інжинірингу, геології та геодезії;</p>
-                        <p> - спеціалізована діяльність із дизайну</p>
-                    </div>
-                    <div class="info_item marged">
-                        <b>Інформація про платника податку:</b>
-                        <p>ФОП: Закаржевський Олександр Ігорович</p>
-                        <p>Номер запису
-                            про проведення державної реєстрації:</p>
-                        <p>2 285 000 0000 002236</p>
+                <div class="contact_info">
+                    <div class="flex_info paragraph">
+                        <div class="info_item">
+                            <b>Види діяльності:</b>
+                            <p> - діяльність у сфері архітектури (основний);</p>
+                            <p> - діяльність у сфері інжинірингу, геології та геодезії;</p>
+                            <p> - спеціалізована діяльність із дизайну</p>
+                        </div>
+                        <div class="info_item marged">
+                            <b>Інформація про платника податку:</b>
+                            <p>ФОП: Закаржевський Олександр Ігорович</p>
+                            <p>Номер запису
+                                про проведення державної реєстрації:</p>
+                            <p>2 285 000 0000 002236</p>
+                        </div>
                     </div>
                 </div>
+                <div class="contact_info">
+                    <div class="flex_info paragraph">
+                        <div class="info_item marged">
+                            <a href="mailto:azexproject@gmail.com ">azexproject@gmail.com</a><br>
+                            <a href="tel: +380937532319 ">093 753 23 19</a><br>
+                            <a href="tel: +380505272660 ">050 527 26 60</a><br>
+                        </div>
+                        <div class="info_item">
+                            <b>Viber:</b>
+                            <p>+380937532319</p>
+                        </div>
+                        <div class="info_item">
+                            <b>Юридична адреса:</b>
+                            <p>Житомирська область,</p>
+                            <p>смт. Іршанськ, вул. Шевченка, 24, к.24, п.і. 12110</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
-    </div>
+        </div>
+
 </div>
 <script>
     (function (){
         const bodyScroll = document.getElementsByTagName('body')[0];
-        const backItems = $('.back_item');
+//        const backItems = $('.back_item');
 
         window.onscroll = function() {
             let scrolled = window.pageYOffset || document.documentElement.scrollTop;
             bodyScroll.style.backgroundPositionY = (scrolled / 2) + "px";
-            $(backItems).each(function () {
-                let speed = parseInt($(this).attr('data-speed'));
-                let angle = parseInt($(this).attr('data-angle'));
-                $(this).css('transform', `translateY(${ - scrolled * speed}px) rotateZ(${angle + scrolled}deg)`);
-            });
+//            $(backItems).each(function () {
+//                let speed = parseInt($(this).attr('data-speed'));
+//                let angle = parseInt($(this).attr('data-angle'));
+//                $(this).css('transform', `translateY(${ - scrolled * speed}px) rotateZ(${angle + scrolled}deg)`);
+//            });
         };
     })()
 </script>
