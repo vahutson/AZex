@@ -55,6 +55,14 @@
             <h1>Житлові та комерційні рішення</h1>
         </div>
     </div>
+    <div class="container second">
+        <h1 class="orange_separator">Побудуйте будинок вашоi мрii!</h1>
+        <div class="flex-tools">
+            <div class="tools-item"><div class="icon-holder"></div></div>
+            <div class="tools-item"><div class="icon-holder"></div></div>
+            <div class="tools-item"><div class="icon-holder"></div></div>
+            <div class="tools-item"><div class="icon-holder"></div></div>
+        </div>
     </div>
 </div>
 <script>
@@ -64,7 +72,7 @@
 
         window.onscroll = function() {
             let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-            bodyScroll.style.backgroundPositionY = (scrolled / 2) + "px";
+            bodyScroll.style.backgroundPositionY = (scrolled / 3) + "px";
             $(backItems).each(function () {
                 let speed = parseInt($(this).attr('data-speed'));
                 let angle = parseInt($(this).attr('data-angle'));

@@ -159,10 +159,18 @@ header nav .contacts {
   top: 85%;
   right: 17%;
 }
+.wrapper .orange_separator {
+  font-size: 40px;
+  line-height: 50px;
+  color: white;
+  text-align: center;
+  background: #f8a408;
+}
 .wrapper .container {
   position: relative;
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   padding: 50px 50px 150px 50px;
   text-align: center;
   z-index: -2;
@@ -170,11 +178,27 @@ header nav .contacts {
 .wrapper .container.second {
   padding: 0;
 }
-.wrapper .container .orange_separator {
-  font-size: 50px;
-  color: white;
-  text-align: center;
+.wrapper .container.second .flex-tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .container.second .flex-tools .tools-item {
+  width: 400px;
+  height: 400px;
+  margin: 25px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 33px 23px 28px 0px rgba(0, 0, 0, 0.24);
+}
+.wrapper .container.second .flex-tools .tools-item .icon-holder {
+  width: 100%;
+  height: 100%;
+  padding: 25px;
   background: #f8a408;
+  border-radius: 15px;
 }
 .wrapper .container .mainBcg {
   position: absolute;
@@ -268,7 +292,7 @@ header nav .contacts {
 }
 .wrapper .container.contact_us .contactMain .formWrap #contactForm input,
 .wrapper .container.contact_us .contactMain .formWrap #contactForm textarea {
-  color: black;
+  color: #000000;
 }
 .wrapper .container.contact_us .contactMain .formWrap .contact_info {
   display: flex;
@@ -340,3 +364,4 @@ header nav .contacts {
   background: #f8a408;
   font-size: 50px;
 }
+(node:7030) DeprecationWarning: util.print is deprecated. Use console.log instead.
