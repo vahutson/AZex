@@ -10,13 +10,12 @@ html {
 
 body {
   width: 100%;
-  max-height: 100%;
   min-height: 100%;
   background: url("img/bricks.jpg") repeat-y;
   background-size: 100% auto;
   font-family: 'Fira Mono', monospace, sans-serif;
   overflow-x: hidden;
-  z-index: -5;
+  //z-index: -5;
 }
 
 a {
@@ -73,119 +72,106 @@ header {
   }
 }
 
-.wrapper {
+.back_items_wrapper {
+  position: absolute;
   width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-  .back_items_wrapper {
+  height: 100%;
+  z-index: 3;
+  .back_item {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    .back_item {
-      position: absolute;
-      width: 100px;
-      &:nth-of-type(odd) {
-        z-index: 0;
-      }
-      &:nth-of-type(even) {
-        z-index: -1;
-        opacity: 0.5;
-      }
-      &:nth-of-type(1), &:nth-of-type(2) {
-        top: 15%;
-        right: 5%;
-      }
-      &:nth-of-type(2) {
-        top: 20%;
-        right: 2%
-      }
-      &:nth-of-type(3), &:nth-of-type(4) {
-        top: 50%;
-        left: 5%;
-        width: 150px;
-        transform: rotateZ(160deg);
-      }
-      &:nth-of-type(4) {
-        top: 60%;
-        left: 7%
-      }
-      &:nth-of-type(5), &:nth-of-type(6) {
-        top: 80%;
-        left: 30%;
-        transform: rotateZ(60deg);
-      }
-      &:nth-of-type(6) {
-        top: 85%;
-        left: 33%
-      }
-      &:nth-of-type(7), &:nth-of-type(8) {
-        top: 20%;
-        left: 26%;
-        width: 140px;
-      }
-      &:nth-of-type(8) {
-        top: 30%;
-        left: 29%;
-      }
-      &:nth-of-type(9), &:nth-of-type(10) {
-        top: 50%;
-        right: 10%;
-        width: 130px;
-        transform: rotateZ(19deg);
-      }
-      &:nth-of-type(10) {
-        top: 60%;
-        right: 7%;
-      }
-      &:nth-of-type(11), &:nth-of-type(12) {
-        top: 10%;
-        left: 5%;
-      }
-      &:nth-of-type(12) {
-        top: 15%;
-        left: 7%;
-      }
-      &:nth-of-type(13), &:nth-of-type(14) {
-        top: 80%;
-        right: 20%;
-      }
-      &:nth-of-type(14) {
-        top: 85%;
-        right: 17%;
-      }
+    width: 100px;
+    user-select: none;
+    &:nth-of-type(odd) {
+      z-index: 0;
+    }
+    &:nth-of-type(even) {
+      z-index: -1;
+      opacity: 0.5;
+    }
+    &:nth-of-type(1), &:nth-of-type(2) {
+      top: 15%;
+      right: 5%;
+    }
+    &:nth-of-type(2) {
+      top: 20%;
+      right: 2%
+    }
+    &:nth-of-type(3), &:nth-of-type(4) {
+      top: 50%;
+      left: 5%;
+      width: 150px;
+      transform: rotateZ(160deg);
+    }
+    &:nth-of-type(4) {
+      top: 60%;
+      left: 7%
+    }
+    &:nth-of-type(5), &:nth-of-type(6) {
+      top: 80%;
+      left: 30%;
+      transform: rotateZ(60deg);
+    }
+    &:nth-of-type(6) {
+      top: 85%;
+      left: 33%
+    }
+    &:nth-of-type(7), &:nth-of-type(8) {
+      top: 20%;
+      left: 26%;
+      width: 140px;
+    }
+    &:nth-of-type(8) {
+      top: 30%;
+      left: 29%;
+    }
+    &:nth-of-type(9), &:nth-of-type(10) {
+      top: 50%;
+      right: 10%;
+      width: 130px;
+      transform: rotateZ(19deg);
+    }
+    &:nth-of-type(10) {
+      top: 60%;
+      right: 7%;
+    }
+    &:nth-of-type(11), &:nth-of-type(12) {
+      top: 10%;
+      left: 5%;
+    }
+    &:nth-of-type(12) {
+      top: 15%;
+      left: 7%;
+    }
+    &:nth-of-type(13), &:nth-of-type(14) {
+      top: 80%;
+      right: 20%;
+    }
+    &:nth-of-type(14) {
+      top: 85%;
+      right: 17%;
     }
   }
+}
 
-  .container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 50px 50px 150px 50px;
-    text-align: center;
-    z-index: -2;
-    &.second {
-      padding: 0;
-    }
-    .orange_separator {
-      font-size: 50px;
-      color: white;
-      text-align: center;
-      background: #f8a408;
-    }
-    .mainBcg {
-      position: absolute;
-    }
-    .bcgPencils {
-      display: block;
-      position: absolute;
-      left: 40%;
-      bottom: 0;
-      width: 20%;
-      margin: 0 auto 0 auto;
-      z-index: -1;
-    }
+.orange_separator {
+  font-size: 20px;
+  line-height: 50px;
+  padding: 0 50px;
+  color: white;
+  text-align: center;
+  background: #f8a408;
+}
 
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: calc(~"100vh - 50px");
+  padding: 100px 0 150px 0;
+  text-align: center;
+  &.index_container {
+    background: url('img/perth-wallpaper-orange.jpg');
+    background-position-y: -150px;
     .main_header {
       width: 300px;
       padding: 25px;
@@ -206,124 +192,113 @@ header {
         border-radius: 15px;
       }
     }
+    .startButton {
+      position: relative;
+      width: 300px;
+      margin: 15px auto 0 auto;
+      padding: 15px;
+      background: linear-gradient(to bottom, rgb(247, 201, 96) 0%, rgb(248, 198, 47) 50%, rgba(248, 164, 8, 1) 52%, rgb(193, 124, 7) 100%);
+      border-radius: 15px;
+      color: #ffffff;
+      font-weight: bold;
+      box-shadow: 33px 23px 28px 0px rgba(0, 0, 0, 0.24);
+      transition: 0.1s;
+      z-index: 3;
+      cursor: pointer;
+      &:hover {
+        background: linear-gradient(to bottom, rgb(247, 220, 164) 0%, rgb(248, 198, 47) 50%, rgba(248, 164, 8, 1) 52%, rgb(252, 169, 7) 100%);
 
-    &.contact_us {
-      .contactMain {
+      }
+    }
+  }
+  &.second {
+    padding: 0;
+    .flex-tools {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      .tools-item {
         display: flex;
-        flex-direction: column;
-        width: 70%;
-        margin: 0 auto;
-        .contactLets {
-          background: #f8a408;
-          h5 {
-            &.paragraph {
-              padding: 15px;
-              color: white;
-              font-size: 30px;
-              font-weight: 900;
-            }
-          }
-          p {
-            &.paragraph {
-              padding: 15px;
-              color: black;
-              font-weight: inherit;
-              line-height: 2;
-            }
+        justify-content: space-between;
+        width: 100%;
+        margin: 25px;
+        padding: 25px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 33px 23px 28px 0px rgba(0, 0, 0, 0.24);
+        &:nth-of-type(1) {
+          .icon-holder {
+            background: url("img/example_4.jpg") center no-repeat;
+            background-size: cover;
           }
         }
-        .formWrap {
-          display: flex;
-          background: #f8a408;
-          #contactForm {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            height: 100%;
-            width: 40%;
-            padding: 15px 15px 0 15px;
-            input, button {
-              height: 30px;
-            }
-            input, textarea, button {
-              border: 1px solid #8e8e8e;
-              padding: 5px;
-              outline: none;
-              font-family: 'Fira Mono', monospace;
-              background: rgb(255, 255, 255);
-            }
-            button {
-              margin: 10px auto 0 auto;
-              width: 100%;
-              color: #f8a408;
-              border: none;
-              background: #ffffff;
-              font-size: 15px;
-              cursor: pointer;
-            }
-            label {
-              color: black;
-            }
-            input, textarea {
-              color: black
-            }
+        &:nth-of-type(2) {
+          .icon-holder {
+            background: url("img/example_6.jpg") center no-repeat;
+            background-size: cover;
           }
-          .contact_info {
-            display: flex;
-            width: 30%;
-            .flex_info {
-              display: flex;
-              flex-direction: column;
-              justify-content: flex-start;
-              padding: 15px;
-              line-height: 1.7;
-              background: #f8a408;
-              .info_item:first-of-type {
-                display: block;
-              }
-
-              .info_item {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                margin: 15px 0 25px 0;
-                p, b {
-                  font-size: 14px;
-                }
-                &.marged {
-                  p, b, a {
-                    margin-bottom: 10px;
-                  }
-                  a {
-                    padding: 0 5px;
-                    background: #9f6b00;
-                    color: #fffdfa;
-                    font-size: 15px;
-                  }
-                }
-                a {
-                  text-align: left;
-                }
-              }
-            }
+        }
+        &:nth-of-type(3) {
+          .icon-holder {
+            background: url("img/example_3.jpg") center no-repeat;
+            background-size: cover;
+          }
+        }
+        &:nth-of-type(4) {
+          .icon-holder {
+            background: url("img/example_1.jpg") center no-repeat;
+            background-size: cover;
+          }
+        }
+        .icon-holder {
+          width: 400px;
+          height: 400px;
+          padding: 25px;
+          background: #f8a408;
+          border: 25px solid #ffffff;
+          border-radius: 15px;
+        }
+        .tool-description {
+          width: 400px;
+          height: 400px;
+          padding: 25px;
+          text-align: left;
+          h5 {
+            font-size: 50px;
+          }
+          ul {
+            font-size: 20px;
+            margin-top: 25px;
+            margin-left: 25px;
+            line-height: 50px;
           }
         }
       }
     }
-    .paragraph {
-      font-family: 'Fira Mono', monospace;
-      text-align: left;
-    }
+  }
+  .mainBcg {
+    position: absolute;
+  }
+  .bcgPencils {
+    display: block;
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+    width: 20%;
+    margin: 0 auto 0 auto;
+    z-index: -1;
   }
 
   &.services {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    padding: 50px 0 0 0;
+    margin-top: 50px;
+    padding: 0;
     .service_item {
       width: 100%;
-      height: 625px;
+      min-height: calc(~"100vh - 50px");
       background-size: contain;
       box-shadow: inset 0 0 84px -12px rgba(0, 0, 0, 0.86);
       &:nth-of-type(1) {
@@ -339,11 +314,125 @@ header {
         text-align: center;
         color: #ffffff;
         background: #f8a408;
-        font-size: 50px;
+        font-size: 40px;
+        line-height: 50px;
       }
     }
   }
+
+  &.contact_us {
+    padding: 0;
+      .contactLets {
+        h5 {
+          &.paragraph {
+            padding: 15px;
+            color: white;
+            font-size: 30px;
+            font-weight: 900;
+          }
+        }
+        p {
+          &.paragraph {
+            padding: 50px;
+            color: black;
+            background: linear-gradient(to bottom, rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 100%,rgba(224,239,249,1) 100%,rgba(181,198,208,1) 102%);
+            font-size: 14px;
+            font-weight: 100;
+            line-height: 2;
+          }
+        }
+      }
+      .formWrap {
+        display: flex;
+        min-height: calc(~"100vh - 100px");
+        color: #ffffff;
+        background: #503a1f;
+        .bottomLogo {
+          position: absolute;
+          width: 250px;
+          right: 80px;
+          bottom: 10px;
+        }
+        #contactForm {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          height: 100%;
+          width: 40%;
+          padding: 15px 15px 0 15px;
+          input, button {
+            height: 30px;
+          }
+          input, textarea, button {
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            outline: none;
+            font-family: 'Fira Mono', monospace;
+            background: #ffdd9e;
+          }
+          button {
+            margin: 25px auto 0 auto;
+            width: 100%;
+            color: #ffffff;
+            border: none;
+            background: linear-gradient(to bottom, rgb(247, 201, 96) 0%, rgb(248, 198, 47) 50%, rgba(248, 164, 8, 1) 52%, rgb(193, 124, 7) 100%);
+            font-size: 15px;
+            cursor: pointer;
+          }
+          label {
+            line-height: 25px;
+            color: #f8a408;
+          }
+          input, textarea {
+            color: black
+          }
+        }
+        .contact_info {
+          display: flex;
+          width: 30%;
+          .flex_info {
+            padding: 15px;
+            line-height: 1.7;
+            .info_item:first-of-type {
+              display: block;
+            }
+
+            .info_item {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              margin: 15px 0 25px 0;
+              p, b {
+                font-size: 14px;
+              }
+              b {
+                color: #f8a408;
+              }
+              &.marged {
+                p, b, a {
+                  margin-bottom: 10px;
+                }
+                a {
+                  color: #f8a408;
+                  font-size: 15px;
+                }
+              }
+              a {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+  }
+  .paragraph {
+    font-family: 'Fira Mono', monospace;
+    text-align: left;
+  }
 }
+
+
 
 
 

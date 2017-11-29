@@ -2,6 +2,7 @@
 <html lang="ua">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
     <script
@@ -12,7 +13,7 @@
 </head>
 <body>
 
-<div class="wrapper">
+
     <header>
         <nav>
             <a href="index.html" class="logo">
@@ -49,22 +50,94 @@
         <img src="img/back_item_3_s-1.png" alt="" class="back_item" data-speed="1" data-angle="0">
 
     </div>
-    <div class="container">
+    <div class="container index_container">
         <div class="main_header">
             <img src="img/logo.png" alt="" class="bigLogo">
             <h1>Житлові та комерційні рішення</h1>
         </div>
+        <div class="startButton">Розпочати</div>
     </div>
+    <div class="container second">
+        <h1 class="orange_separator">Почати будувати будинок мрії не так важко, як здається, ми вам допоможемо!</h1>
+        <div class="contactLets">
+            <p class="paragraph">
+                Подзвонивши або написавши нам, ви дізнаєтесь про перелік документів,
+                необхідний для отримання будівельного паспорту, про порядок оформлення інших документів для
+                будівнцтва
+                житлового будинку, про порядок отримання паспорту прив'язки тимчасової споруди, про приватизацію
+                будинку,
+                про цільове призначення земельної ділянки, про деякі конструктивні рішення для будівництва, про
+                узаконення
+                самовільного будівництва та штрафи, про категорійність та класність об'єктів будівництва та багато
+                іншого.
+            </p>
+        </div>
     </div>
-</div>
+    <div class="container contact_us">
+        <h5 class="orange_separator">Зв`яжіться з нами, щоб отримати безкоштовну консультацію!</h5>
+
+            <div class="formWrap">
+                <form id="contactForm">
+                    <label for="name" class="paragraph">Iм`я</label>
+                    <input type="text" id="name">
+                    <label for="email" class="paragraph">E-mail *</label>
+                    <input type="email" id="email">
+                    <label for="tel" class="paragraph">Телефон (за бажанням)</label>
+                    <input type="tel" id="tel">
+                    <label for="theme" class="paragraph">Тема</label>
+                    <input type="text" id="theme">
+                    <label for="textArea" class="paragraph">Повідомлення *</label>
+                    <textarea id="textArea" rows="6"></textarea>
+                    <button type="submit">Надiслати</button>
+                </form>
+                <div class="contact_info">
+                    <div class="flex_info paragraph">
+                        <div class="info_item">
+                            <b>Види діяльності:</b>
+                            <p> - діяльність у сфері архітектури (основний);</p>
+                            <p> - діяльність у сфері інжинірингу, геології та геодезії;</p>
+                            <p> - спеціалізована діяльність із дизайну</p>
+                        </div>
+                        <div class="info_item marged">
+                            <b>Інформація про платника податку:</b>
+                            <p>ФОП: Закаржевський Олександр Ігорович</p>
+                            <p>Номер запису
+                                про проведення державної реєстрації:</p>
+                            <p>2 285 000 0000 002236</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact_info">
+                    <div class="flex_info paragraph">
+                        <div class="info_item marged">
+                            <a href="tel: +380937532319 ">+38 093 753 23 19</a><br>
+                            <a href="tel: +380505272660 ">+38 050 527 26 60</a><br>
+                            <a href="mailto:azexproject@gmail.com ">azexproject@gmail.com</a><br>
+                        </div>
+                        <div class="info_item">
+                            <b>Viber:</b>
+                            <p>+380937532319</p>
+                        </div>
+                        <div class="info_item">
+                            <b>Юридична адреса:</b>
+                            <p>Житомирська область,</p>
+                            <p>смт. Іршанськ, вул. Шевченка, 24, к.24, п.і. 12110</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="img/logowhite.png" alt="" class="bottomLogo">
+            </div>
+    </div>
 <script>
     (function (){
         const bodyScroll = document.getElementsByTagName('body')[0];
+        const contScroll = $('.container')[0];
         const backItems = $('.back_item');
 
         window.onscroll = function() {
             let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-            bodyScroll.style.backgroundPositionY = (scrolled / 2) + "px";
+//            bodyScroll.style.backgroundPositionY = (scrolled / 3) + "px";
+            contScroll.style.backgroundPositionY = (scrolled / 3 -150) + "px";
             $(backItems).each(function () {
                 let speed = parseInt($(this).attr('data-speed'));
                 let angle = parseInt($(this).attr('data-angle'));
