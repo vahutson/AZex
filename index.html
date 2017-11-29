@@ -16,14 +16,14 @@
 
     <header>
         <nav>
-            <a href="index.html" class="logo">
+            <a href="#" class="logo">
                 <img src="img/logo.png" alt="">
             </a>
             <div class="nav-bar">
                 <a href="services.html" class="nav-item">Послуги</a>
                 <a href="#" class="nav-item">Приклади робiт</a>
                 <a href="#" class="nav-item">Вартiсть</a>
-                <a href="contact_us.html" class="nav-item">Контакти</a>
+                <a href="#" class="nav-item nav-contact">Контакти</a>
             </div>
         </nav>
     </header>
@@ -50,7 +50,7 @@
         <img src="img/back_item_3_s-1.png" alt="" class="back_item" data-speed="1" data-angle="0">
 
     </div>
-    <div class="container index_container">
+    <div id="homeMark" class="container index_container">
         <div class="main_header">
             <img src="img/logo.png" alt="" class="bigLogo">
             <h1>Житлові та комерційні рішення</h1>
@@ -58,8 +58,26 @@
         <div class="startButton">Розпочати</div>
     </div>
     <div class="container second">
-        <h1 class="orange_separator">Почати будувати будинок мрії не так важко, як здається, ми вам допоможемо!</h1>
+        <h1 id="startMark" class="orange_separator">Почати будувати будинок мрії не так важко, як здається, ми вам допоможемо!</h1>
         <div class="contactLets">
+            <div class="flex-tools">
+                <div class="tool">
+                    <img src="img/services.png" class="tool-icon serviceIcon">
+                    <p class="tool-title">Послуги</p>
+                </div>
+                <div class="tool">
+                    <img src="img/port.png" class="tool-icon portfolio">
+                    <p class="tool-title">Портфоліо</p>
+                </div>
+                <div class="tool">
+                    <img src="img/aboutus.png" class="tool-icon">
+                    <p class="tool-title">Про нас</p>
+                </div>
+                <div id="contactGo" class="tool nav-contact">
+                    <img src="img/telephone.png" class="tool-icon telIcon">
+                    <p class="tool-title">Контакти</p>
+                </div>
+            </div>
             <p class="paragraph">
                 Подзвонивши або написавши нам, ви дізнаєтесь про перелік документів,
                 необхідний для отримання будівельного паспорту, про порядок оформлення інших документів для
@@ -73,7 +91,7 @@
             </p>
         </div>
     </div>
-    <div class="container contact_us">
+    <div id="contactsMark" class="container contact_us">
         <h5 class="orange_separator">Зв`яжіться з нами, щоб отримати безкоштовну консультацію!</h5>
 
             <div class="formWrap">
@@ -130,13 +148,28 @@
     </div>
 <script>
     (function (){
-        const bodyScroll = document.getElementsByTagName('body')[0];
         const contScroll = $('.container')[0];
         const backItems = $('.back_item');
+        $('.startButton').on('click', function () {
+            $('html, body').stop().animate({
+                scrollTop: $("#startMark").offset().top - 49
+            }, 1000);
+        });
+
+        $('.nav-contact').on('click', function () {
+            $('html, body').stop().animate({
+                scrollTop: $("#contactsMark").offset().top - 49
+            }, 1000);
+        });
+
+        $('.logo').on('click', function () {
+            $('html, body').stop().animate({
+                scrollTop: $("#homeMark").offset().top - 49
+            }, 1000);
+        });
 
         window.onscroll = function() {
             let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-//            bodyScroll.style.backgroundPositionY = (scrolled / 3) + "px";
             contScroll.style.backgroundPositionY = (scrolled / 3 -150) + "px";
             $(backItems).each(function () {
                 let speed = parseInt($(this).attr('data-speed'));
