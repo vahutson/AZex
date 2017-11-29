@@ -8,7 +8,6 @@ html {
 }
 body {
   width: 100%;
-  max-height: 100%;
   min-height: 100%;
   background: url("img/bricks.jpg") repeat-y;
   background-size: 100% auto;
@@ -68,142 +67,172 @@ header nav .contacts {
   width: 20%;
   text-align: center;
 }
-.wrapper {
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-}
-.wrapper .back_items_wrapper {
+.back_items_wrapper {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: -1;
 }
-.wrapper .back_items_wrapper .back_item {
+.back_items_wrapper .back_item {
   position: absolute;
   width: 100px;
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(odd) {
+.back_items_wrapper .back_item:nth-of-type(odd) {
   z-index: 0;
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(even) {
+.back_items_wrapper .back_item:nth-of-type(even) {
   z-index: -1;
   opacity: 0.5;
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(1),
-.wrapper .back_items_wrapper .back_item:nth-of-type(2) {
+.back_items_wrapper .back_item:nth-of-type(1),
+.back_items_wrapper .back_item:nth-of-type(2) {
   top: 15%;
   right: 5%;
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(2) {
+.back_items_wrapper .back_item:nth-of-type(2) {
   top: 20%;
   right: 2%;
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(3),
-.wrapper .back_items_wrapper .back_item:nth-of-type(4) {
+.back_items_wrapper .back_item:nth-of-type(3),
+.back_items_wrapper .back_item:nth-of-type(4) {
   top: 50%;
   left: 5%;
   width: 150px;
   transform: rotateZ(160deg);
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(4) {
+.back_items_wrapper .back_item:nth-of-type(4) {
   top: 60%;
   left: 7%;
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(5),
-.wrapper .back_items_wrapper .back_item:nth-of-type(6) {
+.back_items_wrapper .back_item:nth-of-type(5),
+.back_items_wrapper .back_item:nth-of-type(6) {
   top: 80%;
   left: 30%;
   transform: rotateZ(60deg);
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(6) {
+.back_items_wrapper .back_item:nth-of-type(6) {
   top: 85%;
   left: 33%;
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(7),
-.wrapper .back_items_wrapper .back_item:nth-of-type(8) {
+.back_items_wrapper .back_item:nth-of-type(7),
+.back_items_wrapper .back_item:nth-of-type(8) {
   top: 20%;
   left: 26%;
   width: 140px;
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(8) {
+.back_items_wrapper .back_item:nth-of-type(8) {
   top: 30%;
   left: 29%;
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(9),
-.wrapper .back_items_wrapper .back_item:nth-of-type(10) {
+.back_items_wrapper .back_item:nth-of-type(9),
+.back_items_wrapper .back_item:nth-of-type(10) {
   top: 50%;
   right: 10%;
   width: 130px;
   transform: rotateZ(19deg);
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(10) {
+.back_items_wrapper .back_item:nth-of-type(10) {
   top: 60%;
   right: 7%;
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(11),
-.wrapper .back_items_wrapper .back_item:nth-of-type(12) {
+.back_items_wrapper .back_item:nth-of-type(11),
+.back_items_wrapper .back_item:nth-of-type(12) {
   top: 10%;
   left: 5%;
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(12) {
+.back_items_wrapper .back_item:nth-of-type(12) {
   top: 15%;
   left: 7%;
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(13),
-.wrapper .back_items_wrapper .back_item:nth-of-type(14) {
+.back_items_wrapper .back_item:nth-of-type(13),
+.back_items_wrapper .back_item:nth-of-type(14) {
   top: 80%;
   right: 20%;
 }
-.wrapper .back_items_wrapper .back_item:nth-of-type(14) {
+.back_items_wrapper .back_item:nth-of-type(14) {
   top: 85%;
   right: 17%;
 }
-.wrapper .orange_separator {
-  font-size: 40px;
+.orange_separator {
+  font-size: 20px;
   line-height: 50px;
+  margin-top: 50px;
+  padding: 0 50px;
   color: white;
   text-align: center;
   background: #f8a408;
 }
-.wrapper .container {
+.container {
   position: relative;
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  padding: 50px 50px 150px 50px;
+  padding: 100px 0 150px 0;
   text-align: center;
   z-index: -2;
 }
-.wrapper .container.second {
+.container.second {
   padding: 0;
 }
-.wrapper .container.second .flex-tools {
+.container.second .flex-tools {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.wrapper .container.second .flex-tools .tools-item {
-  width: 400px;
-  height: 400px;
+.container.second .flex-tools .tools-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   margin: 25px;
   padding: 25px;
-  background: #ffffff;
+  background: white;
   border-radius: 15px;
   box-shadow: 33px 23px 28px 0px rgba(0, 0, 0, 0.24);
 }
-.wrapper .container.second .flex-tools .tools-item .icon-holder {
-  width: 100%;
-  height: 100%;
+.container.second .flex-tools .tools-item:nth-of-type(1) .icon-holder {
+  background: url("img/example_4.jpg") center no-repeat;
+  background-size: cover;
+}
+.container.second .flex-tools .tools-item:nth-of-type(2) .icon-holder {
+  background: url("img/example_6.jpg") center no-repeat;
+  background-size: cover;
+}
+.container.second .flex-tools .tools-item:nth-of-type(3) .icon-holder {
+  background: url("img/example_3.jpg") center no-repeat;
+  background-size: cover;
+}
+.container.second .flex-tools .tools-item:nth-of-type(4) .icon-holder {
+  background: url("img/example_1.jpg") center no-repeat;
+  background-size: cover;
+}
+.container.second .flex-tools .tools-item .icon-holder {
+  width: 400px;
+  height: 400px;
   padding: 25px;
   background: #f8a408;
+  border: 25px solid #ffffff;
   border-radius: 15px;
 }
-.wrapper .container .mainBcg {
+.container.second .flex-tools .tools-item .tool-description {
+  width: 400px;
+  height: 400px;
+  padding: 25px;
+  text-align: left;
+}
+.container.second .flex-tools .tools-item .tool-description h5 {
+  font-size: 50px;
+}
+.container.second .flex-tools .tools-item .tool-description ul {
+  font-size: 20px;
+  margin-top: 25px;
+  margin-left: 25px;
+  line-height: 50px;
+}
+.container .mainBcg {
   position: absolute;
 }
-.wrapper .container .bcgPencils {
+.container .bcgPencils {
   display: block;
   position: absolute;
   left: 40%;
@@ -212,7 +241,7 @@ header nav .contacts {
   margin: 0 auto 0 auto;
   z-index: -1;
 }
-.wrapper .container .main_header {
+.container .main_header {
   width: 300px;
   padding: 25px;
   margin: 50px auto 0 auto;
@@ -220,44 +249,44 @@ header nav .contacts {
   border-radius: 15px;
   box-shadow: 33px 23px 28px 0px rgba(0, 0, 0, 0.24);
 }
-.wrapper .container .main_header h1 {
+.container .main_header h1 {
   font-weight: 100;
   font-size: 23px;
   padding-top: 25px;
 }
-.wrapper .container .main_header .bigLogo {
+.container .main_header .bigLogo {
   display: block;
   background: #f8a408;
   width: 250px;
   margin: 0 auto;
   border-radius: 15px;
 }
-.wrapper .container.contact_us .contactMain {
+.container.contact_us .contactMain {
   display: flex;
   flex-direction: column;
   width: 70%;
   margin: 0 auto;
 }
-.wrapper .container.contact_us .contactMain .contactLets {
+.container.contact_us .contactMain .contactLets {
   background: #f8a408;
 }
-.wrapper .container.contact_us .contactMain .contactLets h5.paragraph {
+.container.contact_us .contactMain .contactLets h5.paragraph {
   padding: 15px;
   color: white;
   font-size: 30px;
   font-weight: 900;
 }
-.wrapper .container.contact_us .contactMain .contactLets p.paragraph {
+.container.contact_us .contactMain .contactLets p.paragraph {
   padding: 15px;
   color: black;
   font-weight: inherit;
   line-height: 2;
 }
-.wrapper .container.contact_us .contactMain .formWrap {
+.container.contact_us .contactMain .formWrap {
   display: flex;
   background: #f8a408;
 }
-.wrapper .container.contact_us .contactMain .formWrap #contactForm {
+.container.contact_us .contactMain .formWrap #contactForm {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -265,20 +294,20 @@ header nav .contacts {
   width: 40%;
   padding: 15px 15px 0 15px;
 }
-.wrapper .container.contact_us .contactMain .formWrap #contactForm input,
-.wrapper .container.contact_us .contactMain .formWrap #contactForm button {
+.container.contact_us .contactMain .formWrap #contactForm input,
+.container.contact_us .contactMain .formWrap #contactForm button {
   height: 30px;
 }
-.wrapper .container.contact_us .contactMain .formWrap #contactForm input,
-.wrapper .container.contact_us .contactMain .formWrap #contactForm textarea,
-.wrapper .container.contact_us .contactMain .formWrap #contactForm button {
+.container.contact_us .contactMain .formWrap #contactForm input,
+.container.contact_us .contactMain .formWrap #contactForm textarea,
+.container.contact_us .contactMain .formWrap #contactForm button {
   border: 1px solid #8e8e8e;
   padding: 5px;
   outline: none;
   font-family: 'Fira Mono', monospace;
   background: #ffffff;
 }
-.wrapper .container.contact_us .contactMain .formWrap #contactForm button {
+.container.contact_us .contactMain .formWrap #contactForm button {
   margin: 10px auto 0 auto;
   width: 100%;
   color: #f8a408;
@@ -287,18 +316,18 @@ header nav .contacts {
   font-size: 15px;
   cursor: pointer;
 }
-.wrapper .container.contact_us .contactMain .formWrap #contactForm label {
+.container.contact_us .contactMain .formWrap #contactForm label {
   color: black;
 }
-.wrapper .container.contact_us .contactMain .formWrap #contactForm input,
-.wrapper .container.contact_us .contactMain .formWrap #contactForm textarea {
+.container.contact_us .contactMain .formWrap #contactForm input,
+.container.contact_us .contactMain .formWrap #contactForm textarea {
   color: #000000;
 }
-.wrapper .container.contact_us .contactMain .formWrap .contact_info {
+.container.contact_us .contactMain .formWrap .contact_info {
   display: flex;
   width: 30%;
 }
-.wrapper .container.contact_us .contactMain .formWrap .contact_info .flex_info {
+.container.contact_us .contactMain .formWrap .contact_info .flex_info {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -306,62 +335,62 @@ header nav .contacts {
   line-height: 1.7;
   background: #f8a408;
 }
-.wrapper .container.contact_us .contactMain .formWrap .contact_info .flex_info .info_item:first-of-type {
+.container.contact_us .contactMain .formWrap .contact_info .flex_info .info_item:first-of-type {
   display: block;
 }
-.wrapper .container.contact_us .contactMain .formWrap .contact_info .flex_info .info_item {
+.container.contact_us .contactMain .formWrap .contact_info .flex_info .info_item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 15px 0 25px 0;
 }
-.wrapper .container.contact_us .contactMain .formWrap .contact_info .flex_info .info_item p,
-.wrapper .container.contact_us .contactMain .formWrap .contact_info .flex_info .info_item b {
+.container.contact_us .contactMain .formWrap .contact_info .flex_info .info_item p,
+.container.contact_us .contactMain .formWrap .contact_info .flex_info .info_item b {
   font-size: 14px;
 }
-.wrapper .container.contact_us .contactMain .formWrap .contact_info .flex_info .info_item.marged p,
-.wrapper .container.contact_us .contactMain .formWrap .contact_info .flex_info .info_item.marged b,
-.wrapper .container.contact_us .contactMain .formWrap .contact_info .flex_info .info_item.marged a {
+.container.contact_us .contactMain .formWrap .contact_info .flex_info .info_item.marged p,
+.container.contact_us .contactMain .formWrap .contact_info .flex_info .info_item.marged b,
+.container.contact_us .contactMain .formWrap .contact_info .flex_info .info_item.marged a {
   margin-bottom: 10px;
 }
-.wrapper .container.contact_us .contactMain .formWrap .contact_info .flex_info .info_item.marged a {
+.container.contact_us .contactMain .formWrap .contact_info .flex_info .info_item.marged a {
   padding: 0 5px;
   background: #9f6b00;
   color: #fffdfa;
   font-size: 15px;
 }
-.wrapper .container.contact_us .contactMain .formWrap .contact_info .flex_info .info_item a {
+.container.contact_us .contactMain .formWrap .contact_info .flex_info .info_item a {
   text-align: left;
 }
-.wrapper .container .paragraph {
+.container .paragraph {
   font-family: 'Fira Mono', monospace;
   text-align: left;
 }
-.wrapper.services {
+.services {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   padding: 50px 0 0 0;
 }
-.wrapper.services .service_item {
+.services .service_item {
   width: 100%;
   height: 625px;
   background-size: contain;
   box-shadow: inset 0 0 84px -12px rgba(0, 0, 0, 0.86);
 }
-.wrapper.services .service_item:nth-of-type(1) {
+.services .service_item:nth-of-type(1) {
   background: url("img/construction.jpg");
 }
-.wrapper.services .service_item:nth-of-type(2) {
+.services .service_item:nth-of-type(2) {
   background: url("img/Scp3M.jpg");
 }
-.wrapper.services .service_item:nth-of-type(3) {
+.services .service_item:nth-of-type(3) {
   background: url("img/maxresdefault.jpg");
 }
-.wrapper.services .service_item h3 {
+.services .service_item h3 {
   text-align: center;
   color: #ffffff;
   background: #f8a408;
   font-size: 50px;
 }
-(node:7030) DeprecationWarning: util.print is deprecated. Use console.log instead.
+(node:8197) DeprecationWarning: util.print is deprecated. Use console.log instead.
