@@ -368,6 +368,12 @@ header nav .contacts {
   font-size: 12px;
   background: #ffdd9e;
 }
+.container.contact_us .formWrap #contactForm #textArea {
+  min-height: 135px;
+  max-height: 180px;
+  min-width: 100%;
+  max-width: 100%;
+}
 .container.contact_us .formWrap #contactForm button {
   width: 100%;
   color: #ffffff;
@@ -398,6 +404,12 @@ header nav .contacts {
   justify-content: space-between;
   margin: 15px 0 25px 0;
 }
+.container.contact_us .formWrap .contact_info .flex_info .info_item ul {
+  list-style: inside;
+}
+.container.contact_us .formWrap .contact_info .flex_info .info_item ul li {
+  font-size: 14px;
+}
 .container.contact_us .formWrap .contact_info .flex_info .info_item p,
 .container.contact_us .formWrap .contact_info .flex_info .info_item b {
   font-size: 14px;
@@ -421,4 +433,4 @@ header nav .contacts {
   font-family: 'Fira Mono', monospace;
   text-align: left;
 }
-(node:1980) DeprecationWarning: util.print is deprecated. Use console.log instead.
+(node:2115) DeprecationWarning: util.print is deprecated. Use console.log instead.
