@@ -221,44 +221,22 @@ header nav .contacts {
   margin: 25px;
 }
 .container.second .flex-tools .tool {
-  width: 250px;
-  height: 250px;
-  margin: 25px;
-  border: 25px solid #ffffff;
-  border-radius: 50%;
-  background: #af6e07;
-  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.49);
   cursor: pointer;
 }
 .container.second .flex-tools .tool .tool-icon {
   width: 130px;
   height: 130px;
-  margin-top: 15px;
-  filter: drop-shadow(0 0 5px #000000) invert(100%);
+  margin: 25px;
+  padding: 10px;
+  border: 10px solid #ffffff;
+  border-radius: 50%;
+  background: #51432e;
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.49);
   cursor: pointer;
-}
-.container.second .flex-tools .tool .tool-icon.portfolio {
-  margin-top: 30px;
-  margin-bottom: 25px;
-  height: 90px;
-  width: 90px;
-}
-.container.second .flex-tools .tool .tool-icon.serviceIcon {
-  width: 110px;
-  height: 110px;
-  margin-top: 22px;
-  margin-bottom: 12px;
-}
-.container.second .flex-tools .tool .tool-icon.telIcon {
-  margin-top: 32px;
-  margin-bottom: 15px;
-  width: 100px;
-  height: 100px;
 }
 .container.second .flex-tools .tool .tool-title {
   font-size: 20px;
   font-weight: bold;
-  color: white;
 }
 .container .mainBcg {
   position: absolute;
@@ -433,4 +411,4 @@ header nav .contacts {
   font-family: 'Fira Mono', monospace;
   text-align: left;
 }
-(node:2143) DeprecationWarning: util.print is deprecated. Use console.log instead.
+(node:2496) DeprecationWarning: util.print is deprecated. Use console.log instead.
