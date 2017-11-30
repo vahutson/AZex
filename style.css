@@ -260,13 +260,6 @@ header nav .contacts {
   font-weight: bold;
   color: white;
 }
-.container.second .paragraph {
-  display: none;
-  padding: 50px;
-  background: #ffffff;
-  font-size: 18px;
-  box-shadow: 0px -5px 14px 0px rgba(0, 0, 0, 0.75);
-}
 .container .mainBcg {
   position: absolute;
 }
@@ -310,6 +303,7 @@ header nav .contacts {
 }
 .container.contact_us {
   padding: 0;
+  background: #503a1f;
 }
 .container.contact_us .contactLets h5.paragraph {
   padding: 15px;
@@ -325,18 +319,18 @@ header nav .contacts {
   font-weight: 100;
   line-height: 2;
 }
+.container.contact_us .paragraph.bottom {
+  padding: 25px 20px;
+  color: white;
+  font-size: 14px;
+  margin: 0 auto;
+  text-align: center;
+}
 .container.contact_us .formWrap {
   display: flex;
   align-items: flex-start;
   min-height: calc(100vh - 100px);
   color: #ffffff;
-  background: #503a1f;
-}
-.container.contact_us .formWrap .bottomLogo {
-  position: absolute;
-  width: 250px;
-  right: 80px;
-  bottom: 10px;
 }
 .container.contact_us .formWrap #contactForm {
   display: flex;
@@ -345,6 +339,17 @@ header nav .contacts {
   height: 100%;
   width: 40%;
   padding: 15px 15px 0 15px;
+}
+.container.contact_us .formWrap #contactForm .nameEmail {
+  display: flex;
+}
+.container.contact_us .formWrap #contactForm .nameEmail input:first-of-type {
+  width: 50%;
+  margin-right: 10px;
+}
+.container.contact_us .formWrap #contactForm .nameEmail input:last-of-type {
+  width: 50%;
+  margin-left: 10px;
 }
 .container.contact_us .formWrap #contactForm input,
 .container.contact_us .formWrap #contactForm button {
@@ -360,6 +365,7 @@ header nav .contacts {
   padding: 5px;
   outline: none;
   font-family: 'Fira Mono', monospace;
+  font-size: 12px;
   background: #ffdd9e;
 }
 .container.contact_us .formWrap #contactForm button {
@@ -415,4 +421,4 @@ header nav .contacts {
   font-family: 'Fira Mono', monospace;
   text-align: left;
 }
-(node:1787) DeprecationWarning: util.print is deprecated. Use console.log instead.
+(node:1980) DeprecationWarning: util.print is deprecated. Use console.log instead.
