@@ -218,21 +218,21 @@ header {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      margin-top: 25px;
+      margin: 25px;
       .tool {
         width: 250px;
         height: 250px;
         margin: 25px;
         border: 25px solid #ffffff;
-        border-radius: 15px;
-        background: #f8a408;
+        border-radius: 50%;
+        background: #af6e07;
         box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.49);
         cursor: pointer;
         .tool-icon {
           width: 130px;
           height: 130px;
           margin-top: 15px;
-          filter: invert(100%);
+          filter: drop-shadow( 0 0 5px black) invert(100%);
           cursor: pointer;
           &.portfolio {
             margin-top: 30px;
@@ -335,6 +335,7 @@ header {
       }
       .formWrap {
         display: flex;
+        align-items: flex-start;
         min-height: calc(~"100vh - 100px");
         color: #ffffff;
         background: #503a1f;
@@ -355,6 +356,8 @@ header {
             height: 30px;
           }
           input, textarea, button {
+            width: 100%;
+            margin: 20px auto 0 auto;
             border: none;
             border-radius: 5px;
             padding: 5px;
@@ -363,7 +366,6 @@ header {
             background: #ffdd9e;
           }
           button {
-            margin: 25px auto 0 auto;
             width: 100%;
             color: #ffffff;
             border: none;
@@ -371,16 +373,13 @@ header {
             font-size: 15px;
             cursor: pointer;
           }
-          label {
-            line-height: 25px;
-            color: #f8a408;
-          }
           input, textarea {
             color: black
           }
         }
         .contact_info {
           display: flex;
+          height: 100%;
           width: 30%;
           .flex_info {
             padding: 15px;

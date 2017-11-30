@@ -218,15 +218,15 @@ header nav .contacts {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 25px;
+  margin: 25px;
 }
 .container.second .flex-tools .tool {
   width: 250px;
   height: 250px;
   margin: 25px;
   border: 25px solid #ffffff;
-  border-radius: 15px;
-  background: #f8a408;
+  border-radius: 50%;
+  background: #af6e07;
   box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.49);
   cursor: pointer;
 }
@@ -234,7 +234,7 @@ header nav .contacts {
   width: 130px;
   height: 130px;
   margin-top: 15px;
-  filter: invert(100%);
+  filter: drop-shadow(0 0 5px #000000) invert(100%);
   cursor: pointer;
 }
 .container.second .flex-tools .tool .tool-icon.portfolio {
@@ -327,6 +327,7 @@ header nav .contacts {
 }
 .container.contact_us .formWrap {
   display: flex;
+  align-items: flex-start;
   min-height: calc(100vh - 100px);
   color: #ffffff;
   background: #503a1f;
@@ -352,6 +353,8 @@ header nav .contacts {
 .container.contact_us .formWrap #contactForm input,
 .container.contact_us .formWrap #contactForm textarea,
 .container.contact_us .formWrap #contactForm button {
+  width: 100%;
+  margin: 20px auto 0 auto;
   border: none;
   border-radius: 5px;
   padding: 5px;
@@ -360,7 +363,6 @@ header nav .contacts {
   background: #ffdd9e;
 }
 .container.contact_us .formWrap #contactForm button {
-  margin: 25px auto 0 auto;
   width: 100%;
   color: #ffffff;
   border: none;
@@ -368,16 +370,13 @@ header nav .contacts {
   font-size: 15px;
   cursor: pointer;
 }
-.container.contact_us .formWrap #contactForm label {
-  line-height: 25px;
-  color: #f8a408;
-}
 .container.contact_us .formWrap #contactForm input,
 .container.contact_us .formWrap #contactForm textarea {
   color: #000000;
 }
 .container.contact_us .formWrap .contact_info {
   display: flex;
+  height: 100%;
   width: 30%;
 }
 .container.contact_us .formWrap .contact_info .flex_info {
@@ -416,4 +415,4 @@ header nav .contacts {
   font-family: 'Fira Mono', monospace;
   text-align: left;
 }
-(node:1640) DeprecationWarning: util.print is deprecated. Use console.log instead.
+(node:1787) DeprecationWarning: util.print is deprecated. Use console.log instead.
