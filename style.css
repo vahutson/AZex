@@ -405,7 +405,7 @@ header nav .contacts {
   margin: 15px 0 25px 0;
 }
 .container.contact_us .formWrap .contact_info .flex_info .info_item ul {
-  list-style: inside;
+  list-style: none;
 }
 .container.contact_us .formWrap .contact_info .flex_info .info_item ul li {
   font-size: 14px;
@@ -433,4 +433,4 @@ header nav .contacts {
   font-family: 'Fira Mono', monospace;
   text-align: left;
 }
-(node:2115) DeprecationWarning: util.print is deprecated. Use console.log instead.
+(node:2143) DeprecationWarning: util.print is deprecated. Use console.log instead.
