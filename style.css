@@ -179,7 +179,7 @@ header nav .contacts {
   padding: 25px;
   margin: 50px auto 0 auto;
   background: #ffffff;
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: 33px 23px 28px 0px rgba(0, 0, 0, 0.24);
 }
 .container.index_container .main_header h1 {
@@ -192,7 +192,7 @@ header nav .contacts {
   background: #f8a408;
   width: 250px;
   margin: 0 auto;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 .container.index_container .startButton {
   position: relative;
@@ -200,7 +200,7 @@ header nav .contacts {
   margin: 15px auto 0 auto;
   padding: 15px;
   background: linear-gradient(to bottom, #f7c960 0%, #f8c62f 50%, #f8a408 52%, #c17c07 100%);
-  border-radius: 15px;
+  border-radius: 5px;
   color: #ffffff;
   font-weight: bold;
   box-shadow: 33px 23px 28px 0px rgba(0, 0, 0, 0.24);
@@ -230,15 +230,14 @@ header nav .contacts {
   padding: 10px;
   border: 10px solid #ffffff;
   border-radius: 50%;
-  background: linear-gradient(135deg, #ff9c1b 0%, #505050 50%, #828d93 51%, #beccd3 100%);
-  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.49);
+  background: linear-gradient(135deg, #cedce7 0%, #596a72 100%);
+  box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.49);
   cursor: pointer;
 }
 .container.second .flex-tools .tool .tool-title {
   font-size: 24px;
   font-weight: bold;
-  color: #fff;
-  text-shadow: 2px 2px 4px #000000;
+  color: #f8a408;
 }
 .container .mainBcg {
   position: absolute;
@@ -264,6 +263,28 @@ header nav .contacts {
   min-height: calc(100vh - 50px);
   background-size: contain;
   box-shadow: inset 0 0 84px -12px rgba(0, 0, 0, 0.86);
+}
+.container.services .service_item .flexService {
+  display: flex;
+  height: calc(100vh - 50px);
+  background: rgba(255, 255, 255, 0.81);
+  padding: 50px;
+  text-align: left;
+}
+.container.services .service_item .flexService .flexService-item {
+  font-size: 20px;
+  width: 60%;
+  padding: 0 50px;
+}
+.container.services .service_item .flexService .flexService-item:first-of-type {
+  width: 40%;
+}
+.container.services .service_item .flexService .flexService-item:first-of-type p {
+  margin-bottom: 15px;
+  color: #f8a408;
+}
+.container.services .service_item .flexService .flexService-item:last-of-type {
+  display: flex;
 }
 .container.services .service_item:nth-of-type(1) {
   background: url("img/construction.jpg");
@@ -309,7 +330,6 @@ header nav .contacts {
 .container.contact_us .formWrap {
   display: flex;
   align-items: flex-start;
-  min-height: calc(100vh - 100px);
   color: #ffffff;
 }
 .container.contact_us .formWrap #contactForm {
@@ -363,7 +383,7 @@ header nav .contacts {
 }
 .container.contact_us .formWrap #contactForm input,
 .container.contact_us .formWrap #contactForm textarea {
-  color: #000000;
+  color: black;
 }
 .container.contact_us .formWrap .contact_info {
   display: flex;
@@ -412,4 +432,3 @@ header nav .contacts {
   font-family: 'Fira Mono', monospace;
   text-align: left;
 }
-(node:2695) DeprecationWarning: util.print is deprecated. Use console.log instead.
