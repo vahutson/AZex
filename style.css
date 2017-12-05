@@ -267,33 +267,43 @@ header nav .contacts {
 .container.services .service_item .flexService {
   display: flex;
   height: calc(100vh - 50px);
-  background: rgba(255, 255, 255, 0.81);
+  background: rgba(255, 255, 255, 0.52);
   padding: 50px;
   text-align: left;
 }
 .container.services .service_item .flexService .flexService-item {
-  font-size: 20px;
-  width: 60%;
+  width: 30%;
+  font-size: 18px;
   padding: 0 50px;
 }
 .container.services .service_item .flexService .flexService-item:first-of-type {
-  width: 40%;
+  width: 30%;
 }
 .container.services .service_item .flexService .flexService-item:first-of-type p {
   margin-bottom: 15px;
+  font-size: 25px;
   color: #f8a408;
+  text-shadow: 1px 1px 0 black;
 }
 .container.services .service_item .flexService .flexService-item:last-of-type {
   display: flex;
+  width: 500px;
+  height: 500px;
+  border: 15px solid white;
+  border-radius: 15px;
+  box-shadow: 33px 23px 28px 0 rgba(0, 0, 0, 0.24);
 }
-.container.services .service_item:nth-of-type(1) {
-  background: url("img/construction.jpg");
+.container.services .service_item .flexService .flexService-item:last-of-type.imageHolder3d {
+  background: url("img/site/Kov.vhod (4).jpg") center no-repeat;
+  background-size: cover;
 }
-.container.services .service_item:nth-of-type(2) {
-  background: url("img/Scp3M.jpg");
+.container.services .service_item .flexService .flexService-item:last-of-type.imageHolderInt {
+  background: url("img/site/int_1.jpg") center no-repeat;
+  background-size: cover;
 }
-.container.services .service_item:nth-of-type(3) {
-  background: url("img/maxresdefault.jpg");
+.container.services .service_item .flexService .flexService-item:last-of-type.imageHolderBuild {
+  background: url("img/site/build_1.jpg") center no-repeat;
+  background-size: cover;
 }
 .container.services .service_item h3 {
   text-align: center;

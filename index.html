@@ -61,26 +61,26 @@
         <h1 id="startMark" class="orange_separator">Почати будувати будинок мрії не так важко, як здається, ми вам допоможемо!</h1>
         <div class="contactLets">
             <div class="flex-tools">
-                <div class="tool">
+                <a href="services.html" class="tool">
                     <img src="img/services.png" class="tool-icon serviceIcon">
                     <p class="tool-title">Послуги</p>
-                </div>
-                <div class="tool">
+                </a>
+                <a class="tool">
                     <img src="img/port.png" class="tool-icon portfolio">
                     <p class="tool-title">Портфоліо</p>
-                </div>
-                <div class="tool">
+                </a>
+                <a class="tool">
                     <img src="img/aboutus.png" class="tool-icon">
                     <p class="tool-title">Про нас</p>
-                </div>
-                <div class="tool">
+                </a>
+                <a class="tool">
                     <img src="img/calculator.png" class="tool-icon">
                     <p class="tool-title">Вартість</p>
-                </div>
-                <div id="contactGo" class="tool nav-contact">
+                </a>
+                <a id="contactGo" class="tool nav-contact">
                     <img src="img/telephone.png" class="tool-icon telIcon">
                     <p class="tool-title">Контакти</p>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -100,11 +100,11 @@
             <div class="formWrap">
                 <form id="contactForm">
                     <div class="nameEmail">
-                    <input type="text" id="name" placeholder="Iм`я">
-                    <input type="email" id="email" placeholder="E-mail *">
+                    <input type="text" name="name" placeholder="Iм`я">
+                    <input type="email" name="email" placeholder="E-mail *">
                     </div>
-                    <input type="text" id="theme" placeholder="Тема">
-                    <textarea id="textArea" rows="8" placeholder="Повідомлення *"></textarea>
+                    <input type="text" name="theme" placeholder="Тема">
+                    <textarea name="message" id="textArea" rows="8" placeholder="Повідомлення *"></textarea>
                     <button type="submit">Надiслати</button>
                 </form>
                 <div class="contact_info">
@@ -176,6 +176,15 @@
                 $(this).css('transform', `translateY(${ - scrolled * speed}px) rotateZ(${angle + scrolled}deg)`);
             });
         };
+        $('#contactForm').on('submit', function (e) {
+            e.preventDefault();
+            const data = $(this).serialize();
+            $.ajax({
+                method: "POST",
+                url: "mail.php",
+                success: console.log(data)
+            })
+        })
     })()
 </script>
 </body>

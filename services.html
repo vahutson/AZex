@@ -37,10 +37,11 @@
                     збір вихідних даних, - виготовлення проектно-конструкторської документації, - отримання дозвільних
                     документів.</p>
             </div>
+            <div class="flexService-item imageHolderBuild"></div>
         </div>
     </div>
     <div class="service_item">
-        <h3>3D-моделювання та розробка</h3>
+        <h3>Візуалізація інтер'єру</h3>
         <div class="flexService">
             <div class="flexService-item">
                 <p>Зазирнемо у майбутнє? Ми знаємо, як.</p>
@@ -52,10 +53,11 @@
                     - Будинки<br>
                     - Офіси</p>
             </div>
+            <div class="flexService-item imageHolderInt"></div>
         </div>
     </div>
     <div class="service_item">
-        <h3>Візуалізація інтер'єру</h3>
+        <h3>3D-моделювання та розробка</h3>
         <div class="flexService">
             <div class="flexService-item">
                 <p>Немає нічого неможливого, давайте сворювати разом.</p>
@@ -65,6 +67,7 @@
                     Створюємо за вашими ескізами та побажаннями.
                     Розробимо креслення по моделі при необхідності.</p>
             </div>
+            <div class="flexService-item imageHolder3d"></div>
         </div>
     </div>
 </div>
@@ -73,9 +76,9 @@
         const arr = document.getElementsByClassName('service_item');
         window.onscroll = function () {
             let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-            arr[0].style.backgroundPositionY = (-scrolled / 2) + "px";
-            arr[1].style.backgroundPositionY = (-scrolled / 2) + "px";
-            arr[2].style.backgroundPositionY = (-scrolled / 2) + "px";
+            arr[0].style.backgroundPositionY = (-scrolled / 5) + "px";
+            arr[1].style.backgroundPositionY = (-scrolled / 5) + "px";
+            arr[2].style.backgroundPositionY = (-scrolled / 5) + "px";
         }
     })()
 </script>
